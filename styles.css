@@ -100,3 +100,8 @@ ul.list-stars li::before {
     transform: translateY(-2px);
     border-color: #a855f7 !important;
 }
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}

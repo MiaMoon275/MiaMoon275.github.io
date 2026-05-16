@@ -1,6 +1,8 @@
 const username = 'MiaMoon275'; 
 const url = `https://api.github.com/users/${username}`;
 
+// const lastFetch = localStorage.getItem("github_cache_time");
+
 const toolsNames = [
     // Backend / Programming
     "python",
