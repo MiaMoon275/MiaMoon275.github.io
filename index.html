@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
     <head>
-        <title>Mia | Softwareentwicklerin</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mia | Software Developer</title>        
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         <script src="js/github-api.js"></script>
+        <script src="js/project-config.js"></script>
+        <script src="js/project-card.js"></script>
     </head>
     <body class="w-100 text-light">
 
         <div class="container-fluid mt-2">
-            <div class="alert-purple fs-5 text-center d-flex justify-content-center align-items-center gap-2">
+            <!-- <div class="alert-purple fs-5 text-center d-flex justify-content-center align-items-center gap-2">
                 <i class="bi bi-cone-striped"></i>
                 <span>This page is currently under construction.</span>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-12 col-md-3 vh-100 border border-dark rounded-2 p-5">
                     <!--Profile Sidebar-->
@@ -34,38 +36,56 @@
                         </div>
                     </div>
 
-                    <div class="ms-2">
-                        <!--Other Information-->
-                        <div class="d-flex">
-                            <span><i class="bi bi-geo-alt-fill text-purple-2"></i> Location</span>
-                            <span id="github-location" class="ms-auto">Germany</span>
+                    <div class="text-user">
+                        <div class="row mt-3">
+                            <div class="col-5">
+                                <i class="bi bi-geo-alt-fill text-purple-2 me-2"></i>Location
+                            </div>
+                            <div class="col-7 d-flex">
+                                <div id="github-location" class="ms-auto">Germany</div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-5">
+                                <i class="bi bi-buildings-fill text-purple-2 me-2"></i>Company
+                            </div>
+                            <div class="col-7 d-flex">
+                                <div id="github-company" class="ms-auto">Freelance</div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-5">
+                                <i class="bi bi-globe text-purple-2 me-2"></i>Website
+                            </div>
+                            <div class="col-7 d-flex">
+                                <a id="github-website" class="ms-auto" href="https://miamoon275.github.io/">miamoon275.github.io/</a>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-5">
+                                <i class="bi bi-buildings-fill text-purple-2 me-2"></i>E-Mail
+                            </div>
+                            <div class="col-7 d-flex">
+                                <a class="ms-auto" href="mailto:mia.sophie.dev@gmail.com">mia.sophie.dev@gmail.com</a>
+                            </div>
                         </div>
 
-                        <div class="d-flex">
-                            <span><i class="bi bi-buildings-fill text-purple-2"></i> Company</span>
-                            <span id="github-company" class="ms-auto">Freelance</span>
+                        <div class="border-top border-dark mt-5 pt-5">
+                            <div id="familiar-tools"></div>
                         </div>
-
-                        <div class="d-flex">
-                            <span><i class="bi bi-globe text-purple-2"></i> Website</span>
-                            <span class="ms-auto">
-                                <a id="github-website" href="https://miamoon275.github.io/">miamoon275.github.io/</a></span>
-                        </div>
-
-                        <div class="d-flex">
-                            <span><i class="bi bi-buildings-fill text-purple-2"></i> E-Mail</span>                            
-                            <span class="ms-auto">
-                                <a href="mailto:mia.sophie.dev@gmail.com">mia.sophie.dev@gmail.com</a></span>
-                        </div>
-
                     </div>
+                    
                 </div>
+                
                 <div class="col-12 col-md-9">
                     
                     <div class="w-100 border border-dark rounded-2 w-100 p-4">
                         <div class="row">
                             <!--Introduction-->
-                            <div class="col-12 col-md-5 border-end border-dark">
+                            <div class="col-12 col-md-5">
                                 <div class="mt-4 p-2">
                                     <div class="fs-2 text-purple-3">
                                         <i class="bi bi-person-fill text-purple-3 mb-2"></i> Hi, my name is Mia
@@ -80,69 +100,21 @@
                                         <i class="bi bi-code-slash"></i> What am i currently working on?
                                     </div>
                                     
-                                    <div class="card-project mb-4 p-3 border border-dark rounded-3">
-                                        <div class="card-body">
-
-                                            <!-- HEADER -->
-                                            <div class="d-flex justify-content-between align-items-start">
-                                                <div>
-                                                    <div class="fs-5 fw-bold">
-                                                        Membership Management Software
-                                                    </div>
-
-                                                    <div class="text-secondary small">
-                                                        <span class="text-purple-2">(</span>
-                                                        <span>Applications • Payments • Contract & Document Generation • SQL Integration • Automation Tools</span>
-                                                        <span class="text-purple-2">)</span>
-                                                    </div>
-                                                </div>
-
-                                                <!-- DATE -->
-                                                <span class="badge text-bg-dark">
-                                                    until Jan 2027
-                                                </span>
-                                            </div>
-
-                                            <!-- DETAILS -->
-                                            <div class="mt-4">
-                                                <!-- Tech -->
-                                                <div class="d-flex align-items-center gap-2 mb-2">
-                                                    <i class="bi bi-gear-fill text-purple-1"></i>
-
-                                                    <span class="text-secondary small">
-                                                        Python • Django • SQL • JavaScript • Bootstrap
-                                                    </span>
-                                                </div>
-
-                                                <!-- Company -->
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <i class="bi bi-building-fill text-purple-1"></i>
-
-                                                    <span class="text-secondary small">
-                                                        <span>Schwimm-Gemeinschaft Neukölln e.V.</span>
-                                                        <span class="ms-1"><i class="bi bi-geo-alt-fill text-purple-1"></i> Germany</span>
-                                                    </span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
+                                    <div id="currentProject"></div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="border-top border-dark mt-4 pt-4">
-                            <div class="fs-4 text-purple-3 mb-2">
-                                <i class="bi bi-tools"></i> Familiar Tools
-                            </div>
-
-                            <div id="familiar-tools"></div>
-                        </div>
+                        </div>                        
                     
                         <div class="border-top border-dark mt-4 pt-4">
-                                <div class="fs-4 text-purple-3 mb-2">
-                                <i class="bi bi-box-seam-fill"></i> Projects
-                            </div>
+                                <div class="fs-4 mb-2">
+                                    <div class="text-purple-3">
+                                        <i class="bi bi-box-seam-fill"></i> Projects
+                                    </div>
+                                    
+                                    <div id="projects">
+
+                                    </div>
+                                </div>
                         </div>
                         
                         <div class="border-top border-dark mt-4 pt-4">
@@ -150,7 +122,6 @@
                                 <i class="bi bi-truck"></i> Contributions
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>

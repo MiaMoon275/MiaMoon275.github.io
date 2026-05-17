@@ -7,9 +7,9 @@
 }
 
 body {
-    /* background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
+    background: linear-gradient(135deg, #0f0c29, #0a0918, #24243e);
     font-family: 'Inter', sans-serif !important;
-    background: #0e1218 !important;
+    /* background: #0e1218 !important; */
 }
 
 #github-avatar {
@@ -104,4 +104,12 @@ ul.list-stars li::before {
 a {
   text-decoration: none !important;
   color: inherit !important;
+}
+
+.text-user {
+    font-size: small !important;
+}
+
+.text-small {
+    font-size: small !important;
 }

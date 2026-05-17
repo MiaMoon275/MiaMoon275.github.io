@@ -1,12 +1,16 @@
 const username = 'MiaMoon275'; 
 const url = `https://api.github.com/users/${username}`;
 
-// const lastFetch = localStorage.getItem("github_cache_time");
+const nextFetch = localStorage.getItem("github_cache_time");
+
+// https://api.github.com/users/MiaMoon275
+// https://api.github.com/users/MiaMoon275/social_accounts
 
 const toolsNames = [
     // Backend / Programming
     "python",
     "django",
+    // "csharp",
 
     // Core Web
     "html5",
@@ -22,21 +26,22 @@ const toolsNames = [
     // IDEs
     "vscode",
     "visualstudio",
-    "intellij",
+    // "intellij",
 
     // Game Dev
-    "csharp",
-    "unity",
+    // "unity",
 ];
 
 function loadData() {
     const cached = localStorage.getItem("github-data");
-    if (cached){
+    if (cached) {
+        // if (nextFetch != null && nextFetch >= new Date()) {
         const data = JSON.parse(cached)
         console.log("Data loaded from cache:")
         console.log(data);
         applyData(data);
         return;
+        // }
     }
 
     console.log("Fetching data from github")
