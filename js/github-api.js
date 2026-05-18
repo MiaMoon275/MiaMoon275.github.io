@@ -1,59 +1,51 @@
-const username = 'MiaMoon275'; 
-const url = `https://api.github.com/users/${username}`;
-
-const nextFetch = localStorage.getItem("github_cache_time");
+const GITHUB_USER_API = `https://api.github.com/users/${USERNAME}`;
 
 // https://api.github.com/users/MiaMoon275
 // https://api.github.com/users/MiaMoon275/social_accounts
 
-const toolsNames = [
-    // Backend / Programming
-    "python",
-    "django",
-    // "csharp",
+async function fetchWithCache({
+    cacheKey,
+    url,
+    useCache,
+    transform = (x) => x,
+}) {
+    const cached = localStorage.getItem(cacheKey);
 
-    // Core Web
-    "html5",
-    "css3",
-    "javascript",
-
-    // UI / Framework
-    "bootstrap",
-
-    // Version Control / Workflow
-    "git",
-
-    // IDEs
-    "vscode",
-    "visualstudio",
-    // "intellij",
-
-    // Game Dev
-    // "unity",
-];
-
-function loadData() {
-    const cached = localStorage.getItem("github-data");
-    if (cached) {
-        // if (nextFetch != null && nextFetch >= new Date()) {
-        const data = JSON.parse(cached)
-        console.log("Data loaded from cache:")
-        console.log(data);
-        applyData(data);
-        return;
-        // }
+    if (useCache && cached) {
+        try {
+            return JSON.parse(cached);
+        } catch {
+            localStorage.removeItem(cacheKey);
+        }
     }
 
-    console.log("Fetching data from github")
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            localStorage.setItem("github-data", JSON.stringify(data));
-            applyData(data);
-        });
+    const res = await fetch(url);
+
+    if (!res.ok) {
+        throw new Error(`HTTP error ${res.status}`);
     }
 
-function applyData(data) {
+    const data = await res.json();
+    const finalData = transform(data);
+
+    localStorage.setItem(cacheKey, JSON.stringify(finalData));
+
+    return finalData;
+}
+/* =========== */
+/* USER Loader */
+/* =========== */
+
+async function loadUserData(useCache) {
+    const data = await fetchWithCache({
+        cacheKey: "github-user-data",
+        url: GITHUB_USER_API,
+        useCache,
+    });
+
+    applyUserData(data);
+}
+function applyUserData(data) {
     // Personal Data
     document.getElementById('github-name').textContent = data.name || data.login;
     document.getElementById('github-avatar').src = data.avatar_url;
@@ -63,39 +55,60 @@ function applyData(data) {
     document.getElementById('github-location').textContent = data.location;
 }
 
-function loadTools() {
-    const container = document.getElementById("familiar-tools");
+/* =========== */
+/* REPO Loader */
+/* =========== */
+const GITHUB_REPO_API = `https://api.github.com/users/${USERNAME}/repos`;
+const MAX_LISTED_REPOS = 3;
+const SKIP_REPOS = [
+    "MiaMoon275",
+]
 
-    const cached = localStorage.getItem("tool-icons");
-
-    if (cached) {
-        console.log("Loaded Tools from cache.")
-        container.innerHTML = cached;
-        return;
-    }
-
-    let html = "";
-
-    toolsNames.forEach(tool => {
-        const baseUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/`;
-
-        html += `
-            <span class="badge bg-dark m-1 d-inline-flex align-items-center gap-1 p-2">
-                <img src="${baseUrl}${tool}-original.svg"
-                     alt="${tool}"
-                     width="24"
-                     height="24"
-                     onerror="this.onerror=null; this.src='${baseUrl}${tool}-plain.svg'">
-                ${tool}
-            </span>
-        `;
+async function loadRepoData(useCache) {
+    const data = await fetchWithCache({
+        cacheKey: "github-repo-data",
+        url: GITHUB_REPO_API,
+        useCache,
     });
 
-    container.innerHTML = html;
-    localStorage.setItem("tool-icons", html);
+    applyRepoData(data);
 }
+function applyRepoData(data) {
+    const container = document.getElementById("projects");
+    let repoCounter = 0;
 
-document.addEventListener("DOMContentLoaded", (event) => {
-    loadData();
-    loadTools();
-})
+    for (const repo of data) {
+        if (repoCounter >= Math.min(MAX_LISTED_REPOS, MAX_LISTED_PROJECTS)) break;
+
+        if (SKIP_REPOS.includes(repo.name)) {
+            continue;
+        }
+
+        const card = new ProjectCard(repo);
+
+        container.insertAdjacentHTML(
+            "beforeend",
+            `
+            <div class="col-12 col-md-4">
+                ${card.html()}
+            </div>
+            `
+        );
+
+        repoCounter++;
+    }
+
+    for (const project of Object.values(PRIVATE_PROJECTS)) {
+        if (repoCounter >= MAX_LISTED_PROJECTS) break;
+
+        const card = new ProjectCard(project);
+
+        container.insertAdjacentHTML("beforeend", `
+            <div class="col-12 col-md-4">
+                ${card.html()}
+            </div>
+        `);
+
+        repoCounter++;
+    }
+}

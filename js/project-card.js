@@ -5,7 +5,7 @@ class ProjectCard {
 
     html() {
         return `
-            <div class="card-project mb-4 p-3 border border-dark rounded-3">
+            <div class="card-project h-100 d-flex flex-column p-3 border border-dark rounded-3">
                 <div class="card-body">
 
                     <!-- HEADER -->
@@ -32,6 +32,14 @@ class ProjectCard {
                             <span class="text-purple-2">(</span>
                             <span>${this.project.description}</span>
                             <span class="text-purple-2">)</span>
+                        </div>
+                    ` : ""}
+
+                    <!-- LANGUAGE -->
+                    ${this.project.language ? `
+                        <div class="text-secondary fs-6 mt-2">
+                            <i class="bi bi-gear-fill text-purple-1"></i>
+                            <span>${this.project.language}</span>
                         </div>
                     ` : ""}
 
@@ -66,21 +74,28 @@ class ProjectCard {
                         `: ""}
 
                 </div>
-                <div class="card-footer d-flex justify-content-between align-items-center">
+                <div class="card-footer d-flex justify-content-between align-items-center text-small mt-3">
 
-                    <!-- LEFT: Contributions -->
-                    <span class="text-purple-1 text-small">
-                        <i class="bi bi-activity text-purple-1"></i>
-                        ${this.project.contributions ?? 0} 
-                        <span class="text-secondary">contributions</span>
-                    </span>
-                    
+                    ${this.project.created_at ? `
+                        <div title="created on">
+                            <i class="bi bi-calendar-plus-fill text-purple-1"></i>
+                            <span class="text-secondary small">
+                                ${new Date(this.project.created_at).toLocaleDateString()}
+                            </span>
+                        </div>
+                    ` : ""}
+                    ${this.project.updated_at ? `
+                        <div title="last updated">
+                            <i class="bi bi-activity text-purple-1"></i>
+                            ${new Date(this.project.updated_at).toLocaleDateString()}
+                        </div>
+                    ` : ""}
+
                     ${this.project.readme ? `
-                        <!-- RIGHT: Readme Link -->
-                        <a href="#" class="btn btn-sm text-small btn-outline-light">
+                        <a href="#" class="btn btn-sm btn-outline-light">
                             View README
                         </a>
-                    `: ""}
+                    ` : ""}
 
                 </div>
             </div>
