@@ -1,28 +1,16 @@
-
-const myTools = {
-    python: "Python",
-    django: "Django",
-    html5: "HTML5",
-    css3: "CSS3",
-    javascript: "JavaScript",
-    bootstrap: "Bootstrap",
-    git: "Git",
-    vscode: "Visual Studio Code",
-    visualstudio: "Visual Studio",
-};
-
 function loadTools(useCache) {
     const container = document.getElementById("my-tools");
     const cached = localStorage.getItem("tool-badges");
 
     if (cached && useCache) {
         container.innerHTML = cached;
+        console.log("Loaded Tool-Badges from cache")
         return;
     }
 
     let html = "";
 
-    Object.entries(myTools).forEach(([tool, label]) => {
+    Object.entries(MY_TOOLS).forEach(([tool, label]) => {
         const baseUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/`;
 
         html += `
@@ -38,5 +26,6 @@ function loadTools(useCache) {
     });
 
     container.innerHTML = html;
+    console.log("Fetched Tool-Badges")
     localStorage.setItem("tool-badges", html);
 }

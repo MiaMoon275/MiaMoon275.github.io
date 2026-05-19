@@ -1,17 +1,16 @@
-const USERNAME = 'MiaMoon275';
-const CACHE_LIFETIME = 30 * 60 * 1000;
-
+var isDesktopDevice = false;
 
 function loadAll() {
     const cacheExpiration = localStorage.getItem("next_fetch");
     const useCache = cacheExpiration && Date.now() < cacheExpiration;
-    loadUserData(useCache);
-    loadRepoData(useCache);
+    loadTextContent();
     loadTools(useCache);
+    loadCertificates();
+    loadProjects();
     localStorage.setItem("next_fetch", Date.now() + CACHE_LIFETIME);
 }
 
-
 document.addEventListener("DOMContentLoaded", (event) => {
+    isDesktopDevice = window.innerWidth >= 768;
     loadAll();
 })
