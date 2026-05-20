@@ -61,6 +61,37 @@ body {
     }
 }
 
+.modal-purple {
+}
+
+
+.modal-purple .modal-footer,
+.modal-purple .modal-header,
+.modal-purple .modal-body {
+    background: #050412;
+    color: white !important;
+    --bs-btn-close-color: white;
+    border-color: #643c7a;
+}
+
+.modal-purple .modal-footer .btn {
+    width: 100%;
+}
+
+.modal-backdrop {
+    background-color: #281144;
+}
+
+@media (min-width: 768px) {
+    .modal-purple .modal-body {
+        min-height: 45vh !important;
+    }
+
+    .modal-purple .modal-footer .btn {
+        width: 15%;
+    }
+}
+
 .img-wrapper {
     height: 200px;
     width: 100%;
@@ -92,18 +123,7 @@ ul.list-stars li {
     padding-left: 1.5rem;
 }
 
-ul.list-stars li::before {
-    content: "\F589";
-    font-family: "bootstrap-icons";
-    font-size: 1.2rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #cd8af4;
-}
-
 .card-project {
-    /* background: rgba(255,255,255,0.03); */
     transition: all 0.2s ease;
 }
 
@@ -117,25 +137,16 @@ a {
   color: inherit !important;
 }
 
-.text-user {
-    font-size: small !important;
-}
-
-.text-small {
-    font-size: small !important;
-}
-
 .card-purple .card-header {
+    font-size: 1.3rem;
     padding-left: 20px;
     padding-top: 15px;
-    font-size: 25px;
     background-color: #0a0a1d;
     color: #ffffff;
 }
 
 .card-purple .card-body {
     transition: all 0.2s ease;
-    font-size: 19px;
     background-color: #0a0a1d;
     color: #e9ddf5;
 }
@@ -172,24 +183,77 @@ a:hover .card-purple {
     background-color: #7e41c8;
 }
 
-@media (min-width: 576px) {
-    body {
-        padding: 0px 5px;
-    }
+body {
+    padding: 0px 5px;
+}
 
-    .avatar-img {
-        width: 75%;
-        object-fit: contain;
-    }
+.avatar-img {
+    width: 75%;
+    object-fit: contain;
+}
+
+.certificate-icon {
+    font-size: 3rem;
 }
 
 @media (min-width: 768px) {
     body {
         padding: 30px 4%;
     }
+    .certificate-icon {
+        font-size: 3.75rem;
+    }
 
     .avatar-img {
         max-height: 25vh;
         object-fit: contain;
     }
+
+    .card-purple .card-header {
+        font-size: 1.45rem;
+    }
+
+    .carousel-item {
+        transition: transform 1.2s ease-in-out;
+    }
+    
+    .fs-1 {
+        font-size: 2.5rem !important;
+    }
+
+    .fs-2 {
+        font-size: 2.125rem !important;
+    }
+
+    .fs-3 {
+        font-size: 1.812rem !important;
+    }
+
+    .fs-4 {
+        font-size: 1.5rem !important;
+    }
+
+    .fs-5 {
+        font-size: 1.375rem !important;
+    }
+
+    .fs-6 {
+        font-size: 1.25rem !important;
+    }
+    
+    .fs-7 {
+        font-size: 1.12rem !important;
+    }
+
+    .fs-8 {
+        font-size: 1rem !important;
+    }
+}
+
+.fs-7 {
+    font-size: 0.9rem;
+}
+
+.fs-8 {
+    font-size: 0.8rem;
 }

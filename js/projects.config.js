@@ -15,9 +15,9 @@ CURRENT_PROJECT = {
 PROJECTS = {
     // preview options: [image-path, name, hidden]
     "0": {
-        "name": "System integrated photo software",
-        "description": "C# .NET system for automated member photo processing and database assignment, streamlining ID card generation and eliminating manual image handling. Includes an archiving and batch import workflow for new member data, improving overall processing efficiency.",
-        "tools": ["C#", ".NET", "MS SQL", "System Integration", "Workflow Automation", "Image Processing" ],
+        "name": "System Integrated Photo Software",
+        "description": ".NET system for automated member photo processing and database assignment, streamlining ID card generation and eliminating manual image handling. Includes an archiving and batch import workflow for new member data, improving overall processing efficiency.",
+        "tools": ["C#", ".NET", "MS SQL", "Workflow Automation", "Image Processing", "System Integration"],
         "company": "Schwimm-Gemeinschaft Neukölln e.V.",
         "location": "Germany",
         "start": "2025-01-01T00:00:00+01:00",
@@ -37,10 +37,10 @@ PROJECTS = {
     "2": {
         "name": "Embroidery Organizer",
         "description": "Django-based embroidery management system running on a Raspberry Pi, enabling centralized design handling, live previews, and direct machine integration via USB.",
-        "tools": ["Python", "Django", "Bootstrap", "System Integration" , "Authentication", "Encryption", "DSGVO"],
+        "tools": ["Python", "Django", "Bootstrap", "SVG Manipulation"],
         "company": "Private",
         "location": "Germany",
-        "start": "2026-05-01T00:00:00+01:00",
-        "end": "2027-01-31T23:59:59+01:00",
+        "start": "2025-03-01T00:00:00+01:00",
+        "end": "2025-05-31T23:59:59+01:00",
     },
 }

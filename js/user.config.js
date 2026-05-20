@@ -15,18 +15,32 @@ const MY_TOOLS = {
 CERTIFICATES = {
     "CS50x": {
         "name": "CS50x - Introduction to Computer Science",
+        "description": "University-level computer science course including 12 lectures, 11 problem sets, and a final project.",
         "issuer": "Harvard University",
         "issued_year": "2024",
+        "learned": ["C", "Algorithms", "Memory", "Data Structures", "Python", "SQL", "Web-development", "Flask", "Cybersecurity"],
         "url": "https://courses.edx.org/certificates/e451e19dfd7143b78c75f4a119820994",
-        "logo_url": "content/cs50x_logo.png"
     }
 }
 
 TEXT_CONTENT = {
-    // "element-id": "Text Content"
-    "ct_hero": "I build clean, scalable and user-friendly web applications with Django and modern technologies.",
+    // "Element Id": "Text Content"
+    "ct_hero": "I build clean, scalable web applications with Django and modern technologies, focusing on usability, performance, and thoughtful user experience.",
     
-    "ct_about_me": `I have always been passionate about programming, 
-                    but after finishing CS50x i got even more passionate about Web-Development.
-                    I love the playground that Django and modern frontend technologies are giving me.`,
+    "ct_about_me": `
+                    <div>
+                        <i class="bi bi-moon-stars-fill text-purple-1 me-1"></i>
+                        Programming has always been a strong passion. After completing CS50x, that passion shifted strongly toward web development. The flexibility and creativity of Django and modern frontend technologies make development especially engaging.
+                    </div>
+
+                    <div class="mt-2">
+                        <i class="bi bi-puzzle-fill text-purple-1 me-1"></i>
+                        My focus lies in building systems that solve real problems and bring structure to complex workflows. Turning ideas into clean, functional interfaces drives most development work.
+                    </div>
+
+                    <div class="mt-2">
+                        <i class="bi bi-box2-heart-fill text-purple-1 me-1"></i>
+                        Clean architecture, maintainable code, and a thoughtful approach to user experience are core priorities. Good software is not only functional but also intuitive and pleasant to use.
+                    </div>
+                    `,
 }

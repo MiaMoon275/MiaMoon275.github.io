@@ -127,26 +127,28 @@ class ProjectCard {
                 
                 ${this.getDateHtml()}
 
-                    <div class="text-secondary fs-6">
+                    <div class="text-secondary fs-8 mb-2">
                         ${this.project.description}
                     </div>
-                    <div class="d-flex mb-3">
+                    <div class="d-flex flex-wrap gap-2">
 
-                        <!-- TOOLS -->
-                        ${this.project.tools ? `
-                            <div class="mb-2">                                
-                                <i class="bi bi-gear-fill text-purple-1"></i>
-                                ${this.project.tools.map(tool => `
-                                    <span class="badge bg-dark text-secondary me-1 mb-1">
-                                        ${tool.trim()}
-                                    </span>
-                                    `).join("")}
-                            </div>
-                            `: ""}
-                    </div>                    
+                    ${this.project.tools ? `
+                        <div class="mb-2">
+                            <i class="bi bi-gear-fill text-purple-1 me-1"></i>
+
+                            ${this.project.tools.map(tool => `
+                                <span class="badge bg-dark text-secondary me-1 mb-1">
+                                    ${tool.trim()}
+                                </span>
+                            `).join("")}
+                        </div>
+                    ` : ""}
+
+                </div>
+                    
                     <!-- COMPANY -->
                     ${this.project.company ? `                        
-                        <div class="d-flex justify-content-between mb-1 fs-7">
+                        <div class="d-flex flex-wrap align-items-start gap-2 fs-8">
                             <div>
                                 <i class="bi bi-building-fill text-purple-1"></i>
                                 <span class="text-secondary me-2">
@@ -210,8 +212,8 @@ function loadProjects() {
 
             html += `
                 <div class="carousel-item ${extra_classes}">
-                    <div class="container h-100" style="width: 92%;">                        
-                        <div class="row h-100 align-items-stretch">
+                    <div class="container p-0">                        
+                        <div class="row align-items-stretch">
             `;
         }
 
@@ -234,4 +236,20 @@ function loadProjects() {
     });
 
     container.innerHTML += html;
+    const el_carousel = document.querySelector('#project-carousel');
+    const carousel = new bootstrap.Carousel(el_carousel, {
+        interval: 4000,
+        touch: true,
+        pause: false
+    });
+
+    el_carousel.addEventListener("mouseenter", () => {
+        carousel.pause();
+    });
+
+    el_carousel.addEventListener("mouseleave", () => {
+        carousel.cycle();
+    });
+
+    carousel.cycle();
 }
