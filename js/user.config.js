@@ -1,6 +1,6 @@
 const USERNAME = 'MiaMoon275';
 
-const TOOLS = {
+const MY_TOOLS = {
     python: "Python",
     django: "Django",
     html5: "HTML5",
