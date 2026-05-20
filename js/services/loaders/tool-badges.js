@@ -10,7 +10,7 @@ function loadTools(useCache) {
 
     let html = "";
 
-    Object.entries(MYYTOOLS).forEach(([tool, label]) => {
+    Object.entries(MY_TOOLS).forEach(([tool, label]) => {
         const baseUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/`;
 
         html += `
