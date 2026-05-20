@@ -33,7 +33,7 @@ class ProjectCard {
         `;
     }
 
-    getDateHtml () {
+    getScheduleHtml () {
         const start = new Date(this.project.start)
         const end = new Date(this.project.end)
         const now = new Date()
@@ -76,7 +76,7 @@ class ProjectCard {
                 `
             } else if(!started) {
                 return `                    
-                    <div class="d-flex justify-content-end mb-3">
+                    <div class="d-flex justify-content-center mb-3">
                         <div>
                             <i class="bi ${progress_icon} text-purple-1 me-2"></i>
                             ${MONTHS_NAMES[start.getMonth()]} ${start.getFullYear()}
@@ -91,7 +91,7 @@ class ProjectCard {
                 `
             } else {
                 return `                    
-                    <div class="d-flex justify-content-end mb-3">
+                    <div class="d-flex justify-content-center mb-3">
                         <div>
                             <i class="bi ${progress_icon} text-purple-1 me-2"></i>
                             ${MONTHS_NAMES[start.getMonth()]} ${start.getFullYear()}
@@ -112,61 +112,62 @@ class ProjectCard {
 
     html() {
         return `
-            <div class="card-purple h-100 d-flex flex-column border border-dark rounded-5  overflow-hidden">
+            <div class="card-purple d-flex flex-column w-100 h-100 rounded-5 overflow-hidden">
                 
                 ${this.getPreviewHtml()}
 
-                <div class="card-header fs-5 pb-3">
+                <div class="card-header d-flex justify-content-center fs-5 pb-3">
                     <i class="bi bi-chevron-left text-purple-3"></i>
                     ${this.project.name}
                     <span class="text-purple-3 fw-light d-inline-block" style="transform: translate(6px, -1px);">/</span>
                     <i class="bi bi-chevron-right text-purple-3 fw-bold"></i>
                 </div>
                 
-                <div class="card-body">
+                <div class="card-body flex-grow-1">
                 
-                ${this.getDateHtml()}
 
                     <div class="text-secondary fs-8 mb-2">
                         ${this.project.description}
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
+                    </div>                    
+                </div>
 
-                    ${this.project.tools ? `
-                        <div class="mb-2">
-                            <i class="bi bi-gear-fill text-purple-1 me-1"></i>
-
+                <div class="card-footer">
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+                        ${this.project.tools ? `
                             ${this.project.tools.map(tool => `
-                                <span class="badge bg-dark text-secondary me-1 mb-1">
+                                <span class="badge bg-dark text-secondary">
                                     ${tool.trim()}
                                 </span>
                             `).join("")}
-                        </div>
-                    ` : ""}
+                        ` : ""}
+                    </div>
 
-                </div>
-                    
+                    ${this.getScheduleHtml()}
                     <!-- COMPANY -->
-                    ${this.project.company ? `                        
-                        <div class="d-flex flex-wrap align-items-start gap-2 fs-8">
-                            <div>
-                                <i class="bi bi-building-fill text-purple-1"></i>
-                                <span class="text-secondary me-2">
-                                    ${this.project.company}
-                                </span>
-                            </div>
-                            ${this.project.location ? `
+                    ${this.project.company || this.project.location ? `                        
+                        <div class="d-flex flex-wrap justify-content-center gap-2 fs-8 mt-3">
+                            ${this.project.company ? `
                                 <div>
-                                    <i class="bi bi-geo-alt-fill text-purple-1 me-2"></i>
-                                    <span class="text-secondary">
-                                        ${this.project.location}
+                                    <i class="bi bi-building-fill text-purple-1"></i>
+                                    <span class="text-secondary me-2">
+                                        ${this.project.company}
                                     </span>
                                 </div>
-                                `: ""}
+                            `: ""}
+                            ${this.project.location ? `
+                            <div>
+                                <i class="bi bi-geo-alt-fill text-purple-1 me-2"></i>
+                                <span class="text-secondary">
+                                    ${this.project.location}
+                                </span>
+                            </div>
+                            `: ""}
                         </div>
-                        `: ""}
+                    `: ""}
                 </div>
-            </div>
+
+            </div
+        </div>
             `
     }
 }
@@ -186,22 +187,16 @@ function loadProjects() {
     let html = ""
 
     Object.entries(PROJECTS).forEach(([key, project], index, array) => {
-
-
+        
         const card = new ProjectCard(project);
-        card.getDateHtml();
-
+        const CARDS_PER_PAGE = 2;
         let extra_classes = ""
         let col_count = 1;
-        col_count = isDesktopDevice ? col_count = 2 : 1
+        col_count = isDesktopDevice ? col_count = CARDS_PER_PAGE : 1
         let col_width = 12;
 
         col_width = Math.floor(12 / col_count)
-        if (col_width < 1) {
-            col_width = 1;
-        } else if (col_width > 12) {
-            col_width = 12;
-        }
+        col_width = Math.max(1, Math.min(col_width, 12));
 
         // Neue Carousel-Seite öffnen
         if (index % col_count === 0) {
@@ -211,15 +206,19 @@ function loadProjects() {
             }
 
             html += `
-                <div class="carousel-item ${extra_classes}">
-                    <div class="container p-0">                        
-                        <div class="row align-items-stretch">
+                <div class="carousel-item ${extra_classes} h-100">
+                    <div class="container p-0 h-100">
+                        <div class="row h-100">
             `;
+        }
+
+        if ((CARDS_PER_PAGE % 2 != 0 && array.length - index) == 1) {
+            col_width = 12
         }
 
         // Card hinzufügen
         html += `
-            <div class="col-md-${col_width}">
+            <div class="col-md-${col_width} d-flex align-items-stretch">
                 ${card.html()}
             </div>
         `;
@@ -238,18 +237,22 @@ function loadProjects() {
     container.innerHTML += html;
     const el_carousel = document.querySelector('#project-carousel');
     const carousel = new bootstrap.Carousel(el_carousel, {
-        interval: 4000,
+        interval: 10000,
         touch: true,
         pause: false
     });
 
-    el_carousel.addEventListener("mouseenter", () => {
+    el_carousel.addEventListener("touchstart", () => {
         carousel.pause();
     });
 
-    el_carousel.addEventListener("mouseleave", () => {
-        carousel.cycle();
+    document.getElementById("btn-project-prev").addEventListener("click", () => {
+        carousel.pause();
     });
 
+    document.getElementById("btn-project-next").addEventListener("click", () => {
+        carousel.pause();
+    });
+    
     carousel.cycle();
 }

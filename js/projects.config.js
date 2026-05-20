@@ -2,7 +2,7 @@ MAX_LISTED_PROJECTS = 6
 
 CURRENT_PROJECT = {
     "name": "Club Management Software",
-    "description": "Used by Berlin’s largest swimming club with more than 6,000 active members, this system streamlines membership management, including applications, payments, and fully automated document generation.",
+    "description": "Used by Berlin’s largest swimming club with more than 5,000 active members, this system streamlines membership management, including applications, payments, and fully automated document generation.",
     "tools": ["Python", "Django", "Bootstrap", "System Integration" , "Authentication", "Encryption", "DSGVO"],
     "readme": "beitrittsverwaltung.md",
     "company": "Schwimm-Gemeinschaft Neukölln e.V.",
@@ -43,4 +43,13 @@ PROJECTS = {
         "start": "2025-03-01T00:00:00+01:00",
         "end": "2025-05-31T23:59:59+01:00",
     },
+    "3": {
+        "name": "GitHub Portfolio",
+        "description": "I am currently working on this page, feel free to check out my code!",
+        "tools": ["JavaScript", "Bootstrap", "Bootstrap-Icons"],
+        "company": "Mia Sophie E. S. - Software Development",
+        "location": "Germany",
+        "start": "2026-05-20T00:00:00+01:00",
+        "end": "2026-05-31T23:59:59+01:00",
+    }
 }

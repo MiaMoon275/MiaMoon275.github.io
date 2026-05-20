@@ -61,17 +61,14 @@ body {
     }
 }
 
-.modal-purple {
-}
-
-
 .modal-purple .modal-footer,
 .modal-purple .modal-header,
 .modal-purple .modal-body {
     background: #050412;
     color: white !important;
     --bs-btn-close-color: white;
-    border-color: #643c7a;
+    border: #643c7a;
+    
 }
 
 .modal-purple .modal-footer .btn {
@@ -137,6 +134,11 @@ a {
   color: inherit !important;
 }
 
+.card-purple {
+    border: 1px solid #25184e !important;
+    background-color: #111;
+}
+
 .card-purple .card-header {
     font-size: 1.3rem;
     padding-left: 20px;
@@ -147,12 +149,13 @@ a {
 
 .card-purple .card-body {
     transition: all 0.2s ease;
-    background-color: #0a0a1d;
+    background-color: #0a0b1c;
     color: #e9ddf5;
 }
 
 .card-purple .card-footer {
-    background-color: #0a0a1d;
+    border-top: 1px solid #25184e;
+    background-color: #0a0b1c;
 }
 
 .card-purple a {    
@@ -162,13 +165,6 @@ a {
 a:hover .card-purple {
     transform: translateY(-2px);
     border-color: #a855f7 !important;
-}
-
-.card-purple .card-header,
-.card-purple .card-body,
-.card-purple .row,
-.card-purple .col-8 {    
-    background-color: #0a0a1d;
 }
 
 .logo-small {
@@ -188,8 +184,7 @@ body {
 }
 
 .avatar-img {
-    width: 75%;
-    object-fit: contain;
+    width: 100vw;
 }
 
 .certificate-icon {
@@ -205,8 +200,10 @@ body {
     }
 
     .avatar-img {
-        max-height: 25vh;
-        object-fit: contain;
+    object-fit:contain;
+    max-height: 400px;
+    transform: translateY(37px);
+    z-index: 1;
     }
 
     .card-purple .card-header {
