@@ -184,11 +184,18 @@ body {
 }
 
 .avatar-img {
+    transform: translateY(15px);
+    height: 100%;
+    z-index: 1;
     width: 100vw;
 }
 
 .certificate-icon {
     font-size: 3rem;
+}
+
+.border-bottom-mobile {
+    border-bottom: 1px solid #25184e;
 }
 
 @media (min-width: 768px) {
@@ -199,11 +206,20 @@ body {
         font-size: 3.75rem;
     }
 
+    .border-bottom-mobile {
+        border: none;
+    }
+
     .avatar-img {
-    object-fit:contain;
-    max-height: 400px;
-    transform: translateY(37px);
-    z-index: 1;
+        position: absolute;
+        bottom: -37px;
+        left: 50%;
+        transform: translateX(-65%);
+        height: 100%;
+        width: auto;
+        max-height: 400px;
+        aspect-ratio: inherit;
+        z-index: 1;
     }
 
     .card-purple .card-header {
@@ -244,6 +260,19 @@ body {
 
     .fs-8 {
         font-size: 1rem !important;
+    }
+}
+
+@media (min-width: 1733px) {
+    .avatar-img {
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 2150px) {
+    .avatar-img {
+        transform: translateX(-30%);
+        max-height: ;
     }
 }
 
