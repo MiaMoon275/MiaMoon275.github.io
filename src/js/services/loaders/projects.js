@@ -1,4 +1,4 @@
-import { CURRENT_PROJECT, PROJECTS } from "../../../../config/projects.config.js";
+import { PROJECTS } from "../../../../config/projects.config.js";
 const PICTURE_PATH = "content/projects/"
 const MONTHS_NAMES = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
@@ -113,7 +113,7 @@ class ProjectCard {
 
     html(screenMdUp) {
         return `
-            <div class="card-purple d-flex flex-column w-100 h-100 rounded-5 overflow-hidden">
+            <div class="card-purple d-flex flex-column w-100 h-100 rounded-top-5 rounded-bottom-2 overflow-hidden">
                 
 <!-- PREVIEW -->
 
@@ -152,6 +152,7 @@ class ProjectCard {
                     </div>
 
 <!-- SCHEDULE -->
+
                     ${this.getScheduleHtml(screenMdUp)}
 
 <!-- COMPANY & LOCATION -->
@@ -182,15 +183,7 @@ class ProjectCard {
     }
 }
 
-function loadCurrentProject() {
-    const container = document.getElementById("current-project");
-    const card = new ProjectCard(CURRENT_PROJECT);
-    container.innerHTML = card.html();   
-}
-
 export function loadProjects(screenMdUp) {
-    loadCurrentProject();
-
     const container = document.getElementById("projects");
 
     container.innerHTML = ""
@@ -229,7 +222,9 @@ export function loadProjects(screenMdUp) {
         // Card hinzufügen
         html += `
                             <div class="col-md-${colWidth} d-flex align-items-stretch">
-                                ${card.html()}
+                                <div class="ps-2 pe-2 ps-md-0 pe-ms-0">
+                                    ${card.html()}
+                                </div>
                             </div>
         `;
 

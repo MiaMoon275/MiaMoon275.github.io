@@ -41,4 +41,15 @@ export const TEXT_CONTENT = {
                         Clean architecture, maintainable code, and a thoughtful approach to user experience are core priorities. Good software is not only functional but also intuitive and pleasant to use.
                     </div>
                     `,
+    "ct-services": `
+                    <ul class="list-group list-purple text-secondary list-group-flush">
+                        <li class="list-group-item">Taking the time to understand your goals, requirements, and existing workflows before designing a solution</li>
+
+                        <li class="list-group-item">Planning structured systems, selecting appropriate technologies, and creating intuitive user experiences with a focus on maintainability and practical use</li>
+
+                        <li class="list-group-item">Developing functional MVPs early in the process so applications can already be tested and used while new features are expanded iteratively</li>
+
+                        <li class="list-group-item">Building reliable, well-documented, and scalable solutions with clear communication throughout the development process</li>
+                    </ul>
+    `
 }
