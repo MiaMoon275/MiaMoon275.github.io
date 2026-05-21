@@ -1,4 +1,6 @@
-function loadCertificates() {
+import { CERTIFICATES } from "../../../../config/user.config.js";
+
+export function loadCertificates() {
     const container = document.getElementById("certifications");
 
 
@@ -8,33 +10,37 @@ function loadCertificates() {
             icon = certificate.icon;
         }
 
-        html = `        
+        const html = `        
             <a href="${certificate.url}">
-                <div class="card-purple h-100 d-flex flex-column p-3 border border-dark rounded-3">
+                <div class="card-purple d-flex flex-column p-3 border rounded-3">
                     <div class="row g-0">
                     
                         <div class="col-3 d-flex align-items-center justify-content-center">
-                            ${certificate.logo_url ? `
-                                <img src="${certificate.logo_url}" class="logo-small" alt="logo">
+                            ${certificate.logoUrl ? `
+                                <img src="${certificate.logoUrl}" class="logo-small" alt="logo">
                             `: `
                                 </i><i class="bi ${icon} certificate-icon"></i>
                             `}
                         </div>
 
                         <div class="col-9">
-                            <div class="card-header fs-6 lh-1">
+
+                            <div class="card-header fs-6 lh-1 ps-0">
                                 ${certificate.name}
                             </div>
-                            <div class="card-body fw-bold pt-0">
+
+                            <div class="card-body d-flex justify-content-between fw-bold ps-0 pt-1">
+
                                 <div class="text-purple-3">
                                     ${certificate.issuer}
                                 </div>
-                                <div class="d-flex">
-                                    <div>
-                                        ${certificate.issued_year}
-                                    </div>
+
+                                <div class="text-secondary">
+                                    ${certificate.issuedYear}
                                 </div>
+
                             </div>
+                            
                         </div>
 
                     </div>

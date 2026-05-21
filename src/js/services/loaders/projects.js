@@ -1,3 +1,4 @@
+import { CURRENT_PROJECT, PROJECTS } from "../../../../config/projects.config.js";
 const PICTURE_PATH = "content/projects/"
 const MONTHS_NAMES = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
@@ -25,15 +26,15 @@ class ProjectCard {
         }
 
         return `
-            <div class="img-wrapper">
-                <div class="d-flex align-items-center justify-content-center h-100 w-100">
-                    ${this.project.name}
+                <div class="img-wrapper">
+                    <div class="d-flex align-items-center justify-content-center fs-8 h-100 w-100">
+                        <i class="bi bi-window-sidebar fs-1 text-secondary"></i>
+                    </div>
                 </div>
-            </div>
         `;
     }
 
-    getScheduleHtml () {
+    getScheduleHtml (screenMdUp) {
         const start = new Date(this.project.start)
         const end = new Date(this.project.end)
         const now = new Date()
@@ -44,15 +45,15 @@ class ProjectCard {
         let progress = (current / total) * 100;
         progress = Math.max(0, Math.min(progress, 100));
 
-        let progress_icon;
+        let progressIcon;
         const started = now.getTime() >= start.getTime();
         const ended = now.getTime() >= end.getTime();
 
-        if (!started) progress_icon = "bi-calendar2-event";
-        else if (progress >= 100) progress_icon = "bi-check-all";
-        else if (progress > 66) progress_icon = "bi-hourglass-bottom";
-        else if (progress > 33) progress_icon = "bi-hourglass-split";
-        else progress_icon = "bi-hourglass-top";
+        if (!started) progressIcon = "bi-calendar2-event";
+        else if (progress >= 100) progressIcon = "bi-check-all";
+        else if (progress > 66) progressIcon = "bi-hourglass-bottom";
+        else if (progress > 33) progressIcon = "bi-hourglass-split";
+        else progressIcon = "bi-hourglass-top";
 
         if (this.project.start && this.project.end) {
             // render proress bar
@@ -67,7 +68,7 @@ class ProjectCard {
                             <span class="text-purple-1"> / </span> ${start.getFullYear()}
                         </span>
                         <span>
-                            <i class="bi ${progress_icon} text-purple-1"></i>
+                            <i class="bi ${progressIcon} text-purple-1"></i>
                         </span>
                         <span class="text-end">${MONTHS_NAMES[end.getMonth()]}
                             <span class="text-purple-1"> / </span> ${end.getFullYear()}
@@ -78,7 +79,7 @@ class ProjectCard {
                 return `                    
                     <div class="d-flex justify-content-center mb-3">
                         <div>
-                            <i class="bi ${progress_icon} text-purple-1 me-2"></i>
+                            <i class="bi ${progressIcon} text-purple-1 me-2"></i>
                             ${MONTHS_NAMES[start.getMonth()]} ${start.getFullYear()}
                         </div>
                         <div class="ms-2 me-2">
@@ -93,7 +94,7 @@ class ProjectCard {
                 return `                    
                     <div class="d-flex justify-content-center mb-3">
                         <div>
-                            <i class="bi ${progress_icon} text-purple-1 me-2"></i>
+                            <i class="bi ${progressIcon} text-purple-1 me-2"></i>
                             ${MONTHS_NAMES[start.getMonth()]} ${start.getFullYear()}
                         </div>
                         <div class="ms-2 me-2">
@@ -110,28 +111,36 @@ class ProjectCard {
         }
     }
 
-    html() {
+    html(screenMdUp) {
         return `
             <div class="card-purple d-flex flex-column w-100 h-100 rounded-5 overflow-hidden">
                 
+<!-- PREVIEW -->
+
                 ${this.getPreviewHtml()}
 
-                <div class="card-header d-flex justify-content-center fs-5 pb-3">
+<!-- NAME -->
+
+                <div class="card-header d-flex justify-content-center text-center fs-6 pb-3">
                     <i class="bi bi-chevron-left text-purple-3"></i>
                     ${this.project.name}
                     <span class="text-purple-3 fw-light d-inline-block" style="transform: translate(6px, -1px);">/</span>
                     <i class="bi bi-chevron-right text-purple-3 fw-bold"></i>
                 </div>
-                
+
                 <div class="card-body flex-grow-1">
                 
+<!-- DESCRIPTION -->
 
-                    <div class="text-secondary fs-8 mb-2">
+                    <div class="text-secondary text-center fs-8 mb-2">
                         ${this.project.description}
-                    </div>                    
-                </div>
+                    </div>
 
+                </div>
                 <div class="card-footer">
+
+<!-- TOOLS -->
+
                     <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
                         ${this.project.tools ? `
                             ${this.project.tools.map(tool => `
@@ -142,30 +151,31 @@ class ProjectCard {
                         ` : ""}
                     </div>
 
-                    ${this.getScheduleHtml()}
-                    <!-- COMPANY -->
-                    ${this.project.company || this.project.location ? `                        
-                        <div class="d-flex flex-wrap justify-content-center gap-2 fs-8 mt-3">
-                            ${this.project.company ? `
-                                <div>
-                                    <i class="bi bi-building-fill text-purple-1"></i>
-                                    <span class="text-secondary me-2">
-                                        ${this.project.company}
-                                    </span>
-                                </div>
-                            `: ""}
-                            ${this.project.location ? `
+<!-- SCHEDULE -->
+                    ${this.getScheduleHtml(screenMdUp)}
+
+<!-- COMPANY & LOCATION -->
+
+                    <div class="d-flex flex-wrap justify-content-center gap-2 fs-8 mt-3">
+                        ${this.project.company ? `
                             <div>
-                                <i class="bi bi-geo-alt-fill text-purple-1 me-2"></i>
-                                <span class="text-secondary">
-                                    ${this.project.location}
+                                <i class="bi bi-building-fill text-purple-1"></i>
+                                <span class="text-secondary me-2">
+                                    ${this.project.company}
                                 </span>
                             </div>
-                            `: ""}
+                        `: ""}
+                        ${this.project.location ? `
+                        <div>
+                            <i class="bi bi-geo-alt-fill text-purple-1 me-2"></i>
+                            <span class="text-secondary">
+                                ${this.project.location}
+                            </span>
                         </div>
-                    `: ""}
-                </div>
+                        `: ""}
 
+                    </div>
+                </div>
             </div
         </div>
             `
@@ -173,12 +183,12 @@ class ProjectCard {
 }
 
 function loadCurrentProject() {
-    container = document.getElementById("current-project");
-    card = new ProjectCard(CURRENT_PROJECT);
+    const container = document.getElementById("current-project");
+    const card = new ProjectCard(CURRENT_PROJECT);
     container.innerHTML = card.html();   
 }
 
-function loadProjects() {
+export function loadProjects(screenMdUp) {
     loadCurrentProject();
 
     const container = document.getElementById("projects");
@@ -186,73 +196,75 @@ function loadProjects() {
     container.innerHTML = ""
     let html = ""
 
-    Object.entries(PROJECTS).forEach(([key, project], index, array) => {
+    PROJECTS.forEach((project, index) => {
         
         const card = new ProjectCard(project);
-        const CARDS_PER_PAGE = 2;
-        let extra_classes = ""
-        let col_count = 1;
-        col_count = isDesktopDevice ? col_count = CARDS_PER_PAGE : 1
-        let col_width = 12;
+        const cardsPerPage = 2;
+        let extraClasses = ""
+        let colCount = 1;
+        colCount = screenMdUp ? colCount = cardsPerPage : 1
+        let colWidth = 12;
 
-        col_width = Math.floor(12 / col_count)
-        col_width = Math.max(1, Math.min(col_width, 12));
+        colWidth = Math.floor(12 / colCount)
+        colWidth = Math.max(1, Math.min(colWidth, 12));
 
         // Neue Carousel-Seite öffnen
-        if (index % col_count === 0) {
+        if (index % colCount === 0) {
             
             if(index == 0) {
-                extra_classes = "active";
+                extraClasses = "active";
             }
 
             html += `
-                <div class="carousel-item ${extra_classes} h-100">
+                <div class="carousel-item ${extraClasses} h-100">
                     <div class="container p-0 h-100">
                         <div class="row h-100">
             `;
         }
 
-        if ((CARDS_PER_PAGE % 2 != 0 && array.length - index) == 1) {
-            col_width = 12
+        if ((cardsPerPage % 2 != 0 && array.length - index) == 1) {
+            colWidth = 12
         }
 
         // Card hinzufügen
         html += `
-            <div class="col-md-${col_width} d-flex align-items-stretch">
-                ${card.html()}
-            </div>
+                            <div class="col-md-${colWidth} d-flex align-items-stretch">
+                                ${card.html()}
+                            </div>
         `;
 
     
         // Carousel-Seite schließen
-        if (index % col_count === col_count - 1 || index === array.length - 1) {
+        if (index % colCount === colCount - 1 || index === PROJECTS.length - 1) {
             html += `
+                        </div>
                     </div>
                 </div>
-            </div>
             `;
         }
-    });
+    })
 
     container.innerHTML += html;
-    const el_carousel = document.querySelector('#project-carousel');
-    const carousel = new bootstrap.Carousel(el_carousel, {
+    const elCarousel = document.querySelector('#project-carousel');
+    const carousel = new bootstrap.Carousel(elCarousel, {
         interval: 10000,
         touch: true,
         pause: false
     });
 
-    el_carousel.addEventListener("touchstart", () => {
+    elCarousel.addEventListener("touchstart", () => {
         carousel.pause();
     });
 
-    document.getElementById("btn-project-prev").addEventListener("click", () => {
-        carousel.pause();
-    });
+    // document.getElementById("btn-project-prev").addEventListener("click", () => {
+    //     carousel.pause();
+    // });
 
-    document.getElementById("btn-project-next").addEventListener("click", () => {
-        carousel.pause();
-    });
-    
-    carousel.cycle();
+    // document.getElementById("btn-project-next").addEventListener("click", () => {
+    //     carousel.pause();
+    // });
+
+    if(!screenMdUp) {
+        carousel.cycle();
+    }
 }

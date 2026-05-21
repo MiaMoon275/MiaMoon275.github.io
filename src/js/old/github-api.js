@@ -32,10 +32,8 @@ async function fetchWithCache({
 
     return finalData;
 }
-/* =========== */
-/* USER Loader */
-/* =========== */
 
+/* USER Loader */
 async function loadUserData(useCache) {
     const data = await fetchWithCache({
         cacheKey: "github-user-data",
@@ -55,9 +53,7 @@ function applyUserData(data) {
     document.getElementById('github-location').textContent = data.location;
 }
 
-/* =========== */
 /* REPO Loader */
-/* =========== */
 const GITHUB_REPO_API = `https://api.github.com/users/${USERNAME}/repos`;
 const MAX_LISTED_REPOS = 3;
 const SKIP_REPOS = [

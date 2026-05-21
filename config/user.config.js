@@ -1,6 +1,4 @@
-const USERNAME = 'MiaMoon275';
-
-const MY_TOOLS = {
+export const MY_TOOLS = {
     python: "Python",
     django: "Django",
     html5: "HTML5",
@@ -12,22 +10,22 @@ const MY_TOOLS = {
     visualstudio: "Visual Studio",
 };
 
-CERTIFICATES = {
+export const CERTIFICATES = {
     "CS50x": {
         "name": "CS50x - Introduction to Computer Science",
         "description": "University-level computer science course including 12 lectures, 11 problem sets, and a final project.",
         "issuer": "Harvard University",
-        "issued_year": "2024",
+        "issuedYear": "2024",
         "learned": ["C", "Algorithms", "Memory", "Data Structures", "Python", "SQL", "Web-development", "Flask", "Cybersecurity"],
         "url": "https://courses.edx.org/certificates/e451e19dfd7143b78c75f4a119820994",
     }
 }
 
-TEXT_CONTENT = {
+export const TEXT_CONTENT = {
     // "Element Id": "Text Content"
-    "ct_hero": "I build clean, scalable web applications with Django and modern technologies, focusing on usability, performance, and thoughtful user experience.",
+    "ct-hero": "I build clean, scalable web applications with Django and modern technologies, focusing on usability, performance, and thoughtful user experience.",
     
-    "ct_about_me": `
+    "ct-about-me": `
                     <div>
                         <i class="bi bi-moon-stars-fill text-purple-1 me-1"></i>
                         Programming has always been a strong passion. After completing CS50x, that passion shifted strongly toward web development. The flexibility and creativity of Django and modern frontend technologies make development especially engaging.

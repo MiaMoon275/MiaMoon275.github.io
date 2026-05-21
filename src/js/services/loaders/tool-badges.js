@@ -1,4 +1,6 @@
-function loadTools(useCache) {
+import { MY_TOOLS } from "../../../../config/user.config.js";
+
+export function loadTools(useCache) {
     const container = document.getElementById("my-tools");
     const cached = localStorage.getItem("tool-badges");
 
