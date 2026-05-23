@@ -12,10 +12,11 @@ function loadAll() {
     const cacheExpiration = Number(localStorage.getItem("next_fetch"));
     const useCache = cacheExpiration && Date.now() < cacheExpiration;
     const screenMdUp = window.innerWidth >= 768;
-    loadTextContent();
+    
     loadTools(useCache);
     loadCertificates();
     loadProjects(screenMdUp);
+    loadTextContent();
     localStorage.setItem("next_fetch", Date.now() + CACHE_LIFETIME);
 }
 

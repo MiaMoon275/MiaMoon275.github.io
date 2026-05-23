@@ -14,13 +14,26 @@ export const PROJECTS = [
     
     {
         "name": "GitHub Portfolio",
-        "description": "I am currently working on this page, feel free to check out my code!",
+        "description": "This page is supposed to give recruiters and companies an overview about my experience in Django Development. Feel free to explore the code.",
         "tools": ["JavaScript", "Bootstrap", "Bootstrap-Icons"],
-        "company": "Mia Sophie E. S. - Software Development",
+        "company": "Mia E.S. - Software Development",
         "location": "Germany",
         "start": "2026-05-20T00:00:00+01:00",
         "end": "2026-06-05T23:59:59+01:00",
         "preview": "github_portfolio.png",
+        "sourceUrl": "https://github.com/MiaMoon275/MiaMoon275.github.io",
+    },
+
+    
+    {
+        "name": "Remote File Synchronisation Service",
+        "description": "Configurable Python-based file synchronisation and backup service with automatic SFTP uploads, checksum validation, retry handling, delayed cleanup workflows, and persistent sync state tracking. Designed for lightweight server backups, SQLite database snapshots, log archiving, and automated document synchronisation.",
+        "tools": ["Python", "SFTP", "Paramiko", "JSON", "File Synchronisation", "Checksum Validation", "SQLite Backup", "Logging"],        
+        "company": "Mia E.S. - Software Development",
+        "location": "Germany",
+        "start": "2026-05-15T00:00:00+01:00",
+        "end": "2026-06-10T23:59:59+01:00",
+        "preview": "file_synchronisation.png",
     },
 
     {
@@ -47,10 +60,11 @@ export const PROJECTS = [
     {
         "name": "Embroidery Organizer",
         "description": "Django-based embroidery management system running on a Raspberry Pi, enabling centralized design handling, live previews, and direct machine integration via USB.",
-        "tools": ["Python", "Django", "Bootstrap", "SVG Manipulation"],
+        "tools": ["Python", "Django", "Bootstrap", "SVG Manipulation", "Hardware Simulation", "Hardware Integration"],
         "company": "Private",
         "location": "Germany",
         "start": "2025-03-01T00:00:00+01:00",
         "end": "2025-05-31T23:59:59+01:00",
+        "preview": "embroidery_interface.png",
     }
 ]

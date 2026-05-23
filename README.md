@@ -1,4 +1,4 @@
-# 👩‍💻 Mia Sophie Emerick Schober – Developer Portfolio
+# 👩🏻‍💻 Mia Sophie Emerick Schober – Developer Portfolio
 
 Welcome to my personal portfolio website 👋  
 This project showcases my understanding, work, and passion for modern web development.  
@@ -57,25 +57,20 @@ MiaMoon275.github.io/
 ├── config/
 │   ├── projects.config.js
 │   └── user.config.js
-│
 ├── src/
 │   ├── css/
 |   |   └── styles.css
-|   |
 │   ├── js/
 │   │   ├── services/
 │   │   │   ├── certificates.js
 │   │   │   ├── projects.js
 │   │   │   ├── text-content.js
 │   │   │   └── tool-badges.js
-|   |   |
 │   │   └── main.js
-│   │
 ├── content/
 │   ├── content/
 │   ├── projects/
 │   └── avatar.png
-|
 ├── index.html
 └── README.md
 ```

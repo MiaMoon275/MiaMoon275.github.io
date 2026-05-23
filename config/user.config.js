@@ -51,5 +51,5 @@ export const TEXT_CONTENT = {
 
                         <li class="list-group-item">Building reliable, well-documented, and scalable solutions with clear communication throughout the development process</li>
                     </ul>
-    `
+                    `
 }

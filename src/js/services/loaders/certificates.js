@@ -12,14 +12,14 @@ export function loadCertificates() {
 
         const html = `        
             <a href="${certificate.url}">
-                <div class="card-purple d-flex flex-column p-3 border rounded-3">
+                <div class="card-purple d-flex flex-column p-3 rounded-3">
                     <div class="row g-0">
                     
                         <div class="col-3 d-flex align-items-center justify-content-center">
                             ${certificate.logoUrl ? `
                                 <img src="${certificate.logoUrl}" class="logo-small" alt="logo">
                             `: `
-                                </i><i class="bi ${icon} certificate-icon"></i>
+                                </i><i class="bi ${icon} text-white certificate-icon"></i>
                             `}
                         </div>
 

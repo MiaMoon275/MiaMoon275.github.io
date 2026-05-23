@@ -1,0 +1,180 @@
+:root {
+    --default-bgColor-0: #050412;
+    --default-bgColor-1: #0a0a1d;
+    --default-bgColor-2: #1c1939;
+    --default-bgColor-3: #1e1b4b;
+    --default-color-0: #bcb9cecf;
+    --default-color-1: #cfc1d6;
+    --default-color-2: #cd8af4;
+    --default-color-3: #7e41c8;
+
+    --default-paddingTop: 12px;
+    --default-paddingLeft: 12px;
+
+    --pcard-preview-paddingLeft: 8px;
+
+    --pcard-default-font-size: 16px;
+    --pcard-default-line-height: 1.3;
+}
+
+.project-scroll {
+    scrollbar-color: var(--default-color-3) var(--default-bgColor-3);
+}
+
+.card-project {
+    width: 100%;
+    color: rgba(var(--bs-secondary-rgb),var(--bs-text-opacity));
+    border: 3px solid var(--default-bgColor-3);
+    background-color: var(--default-bgColor-1);
+    overflow: hidden;
+}
+
+.card-project .card-header {
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    background-color: var(--default-bgColor-3);
+    color: var(--default-color-1);
+    font-weight: bold;
+}
+
+.card-project .project-name {
+    padding: var(--default-paddingTop) 0px;
+}
+
+.card-project .card-body {
+    color: var(--default-color-0);
+    padding: 0px;
+}
+
+.card-project .description-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(var(--pcard-default-font-size) * var(--pcard-default-line-height) * 5);
+}
+
+.card-project .project-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+
+    overflow: hidden;
+
+    font-size: var(--pcard-default-font-size);
+    line-height: var(--pcard-default-line-height);
+
+    text-align: center;
+
+    margin: 0;
+}
+
+.tool-badge-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    margin: var(--default-paddingTop) 0px;
+}
+.project-tools {
+    max-height: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.tool-badge {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+
+    font-size: 12px;
+    padding: 8px;
+}
+
+.card-project .project-company {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 26px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: var(--default-paddingTop);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .project-scroll {
+        scrollbar-width: thin;
+    }
+
+    .card-project {
+        width: 600px;
+    }
+
+    .card-project .img-wrapper {
+        height: 100%;
+        overflow: hidden;
+        background-color: var(--default-bgColor-2);
+    }
+
+    .card-project .img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* display: block; */
+    }    
+
+    .card-project .project-description {
+        text-align: start;
+        margin: var(--default-paddingTop) var(--default-paddingLeft);
+    }
+
+    
+
+/* .project-tools {
+    max-height: 44px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+}  */
+
+    .tool-badge-wrapper {
+        height: 56px;
+    }
+    
+    .project-tools {
+        max-height: 56px;
+    }
+
+    .tool-badge {
+        height: 24px;
+        font-size: 15px;
+        padding: 10px;
+        margin: 0px;
+    }
+    
+    /* .card-project .project-progress {
+        overflow: hidden;
+        margin: var(--default-paddingTop) var(--default-paddingLeft);
+        height: 40px;
+    } */
+
+    .card-project .project-company {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        height: 30px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1;
+    }
+}
