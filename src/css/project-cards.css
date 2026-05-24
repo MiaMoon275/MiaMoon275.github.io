@@ -1,20 +1,10 @@
 :root {
-    --default-bgColor-0: #050412;
-    --default-bgColor-1: #0a0a1d;
-    --default-bgColor-2: #1c1939;
-    --default-bgColor-3: #1e1b4b;
-    --default-color-0: #bcb9cecf;
-    --default-color-1: #cfc1d6;
-    --default-color-2: #cd8af4;
-    --default-color-3: #7e41c8;
-
-    --default-paddingTop: 12px;
-    --default-paddingLeft: 12px;
-
-    --pcard-preview-paddingLeft: 8px;
-
+    --default-paddingY: 12px;
+    --default-paddingX: 12px;
     --pcard-default-font-size: 16px;
-    --pcard-default-line-height: 1.3;
+    --pcard-default-line-height: 1.5;    
+    --pcard-default-mobile-font-size: 13px;
+    --pcard-default-mobile-line-height: 1.2;
 }
 
 .project-scroll {
@@ -40,7 +30,7 @@
 }
 
 .card-project .project-name {
-    padding: var(--default-paddingTop) 0px;
+    padding: var(--default-paddingY) 0px;
 }
 
 .card-project .card-body {
@@ -48,34 +38,23 @@
     padding: 0px;
 }
 
-.card-project .description-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(var(--pcard-default-font-size) * var(--pcard-default-line-height) * 5);
-}
-
 .card-project .project-description {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 5;
 
     overflow: hidden;
 
-    font-size: var(--pcard-default-font-size);
-    line-height: var(--pcard-default-line-height);
+    font-size: var(--pcard-default-mobile-font-size);
+    line-height: var(--pcard-default-mobile-line-height);
 
     text-align: center;
-
-    margin: 0;
+    margin: 6px;
 }
 
 .tool-badge-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 48px;
-    margin: var(--default-paddingTop) 0px;
+    margin: var(--default-paddingY) 0px;
 }
 .project-tools {
     max-height: 48px;
@@ -105,7 +84,7 @@
     font-size: 12px;
     font-weight: bold;
     line-height: 1;
-    margin-bottom: var(--default-paddingTop);
+    margin-bottom: var(--default-paddingY);
 }
 
 /* Responsive */
@@ -127,24 +106,14 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* display: block; */
-    }    
-
-    .card-project .project-description {
-        text-align: start;
-        margin: var(--default-paddingTop) var(--default-paddingLeft);
     }
 
-    
-
-/* .project-tools {
-    max-height: 44px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    overflow: hidden;
-}  */
+    .card-project .project-description {
+        font-size: var(--pcard-default-font-size);
+        line-height: var(--pcard-default-line-height);
+        text-align: start;
+        margin: var(--default-paddingY) var(--default-paddingX);
+    }
 
     .tool-badge-wrapper {
         height: 56px;
@@ -160,17 +129,8 @@
         padding: 10px;
         margin: 0px;
     }
-    
-    /* .card-project .project-progress {
-        overflow: hidden;
-        margin: var(--default-paddingTop) var(--default-paddingLeft);
-        height: 40px;
-    } */
 
     .card-project .project-company {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         overflow: hidden;
         height: 30px;
         font-size: 18px;

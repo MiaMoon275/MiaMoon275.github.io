@@ -11,7 +11,7 @@ class ProjectCard {
 
     getHtml(project) {
         return `            
-            <div class="card-project flex-shrink-0 rounded-3">
+            <div class="card-project d-flex flex-column flex-shrink-0 rounded-3">
                         
                 <div class="card-header">
                     <div class="project-name text-truncate">
@@ -20,8 +20,8 @@ class ProjectCard {
                 </div>
 
                 <div class="card-body">
-                    <div class="container-fluid g-0">
-                        <div class="row g-0">
+                    <div class="container-fluid g-0 h-100">
+                        <div class="row g-0 h-100">
 
                             ${this.project.preview ? `
                             <div class="col-md-4 d-none d-md-block">
@@ -32,7 +32,7 @@ class ProjectCard {
                             `: ""}
 
                             <div class="col g-0">
-                                <div class="description-wrapper">
+                                <div class="description-wrapper d-flex justify-content-center align-items-center h-100">
                                     <p class="project-description">
                                         ${this.project.description ? this.project.description : "No description available"}
                                     </p>
@@ -47,7 +47,7 @@ class ProjectCard {
                 <div class="card-footer">
 
                     <!-- Tool Badges -->
-                    <div class="tool-badge-wrapper">
+                    <div class="tool-badge-wrapper  d-flex justify-content-center align-items-center">
                         <div class="project-tools">
                             ${this.project.tools ?
                                 this.project.tools.map(tool => `

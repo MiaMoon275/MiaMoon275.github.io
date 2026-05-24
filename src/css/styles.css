@@ -125,7 +125,7 @@ a {
 }
 
 .avatar-img {
-    /* transform: translateY(15px); */
+    transform: translateY(16px);
     z-index: 1;
     height: 100%;
     width: 100%;
@@ -231,7 +231,7 @@ a:hover .card-purple {
         position: absolute;
         right: 0;
         bottom: 0px;
-        transform: translateY(36px);
+        transform: translateY(45px);
         width: auto;
         max-height: 500px;
         z-index: 1;
