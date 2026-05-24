@@ -19,6 +19,7 @@
 
 .project-scroll {
     scrollbar-color: var(--default-color-3) var(--default-bgColor-3);
+    scrollbar-width: thin;
 }
 
 .card-project {
@@ -30,7 +31,7 @@
 }
 
 .card-project .card-header {
-    font-size: 24px;
+    font-size: 16px;
     line-height: 1;
     text-align: center;
     background-color: var(--default-bgColor-3);
@@ -109,12 +110,11 @@
 
 /* Responsive */
 @media (min-width: 768px) {
-    .project-scroll {
-        scrollbar-width: thin;
-    }
-
     .card-project {
         width: 600px;
+    }
+    .card-project .card-header {
+        font-size: 21px;
     }
 
     .card-project .img-wrapper {

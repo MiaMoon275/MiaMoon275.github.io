@@ -23,33 +23,5 @@ export const CERTIFICATES = {
 
 export const TEXT_CONTENT = {
     // "Element Id": "Text Content"
-    "ct-hero": "I build clean, scalable web applications with Django and modern technologies, focusing on usability, performance, and thoughtful user experience.",
-    
-    "ct-about-me": `
-                    <div>
-                        <i class="bi bi-moon-stars-fill text-purple-1 me-1"></i>
-                        Programming has always been a strong passion. After completing CS50x, that passion shifted strongly toward web development. The flexibility and creativity of Django and modern frontend technologies make development especially engaging.
-                    </div>
-
-                    <div class="mt-2">
-                        <i class="bi bi-puzzle-fill text-purple-1 me-1"></i>
-                        My focus lies in building systems that solve real problems and bring structure to complex workflows. Turning ideas into clean, functional interfaces drives most development work.
-                    </div>
-
-                    <div class="mt-2">
-                        <i class="bi bi-box2-heart-fill text-purple-1 me-1"></i>
-                        Clean architecture, maintainable code, and a thoughtful approach to user experience are core priorities. Good software is not only functional but also intuitive and pleasant to use.
-                    </div>
-                    `,
-    "ct-services": `
-                    <ul class="list-group list-purple text-secondary list-group-flush">
-                        <li class="list-group-item">Taking the time to understand your goals, requirements, and existing workflows before designing a solution</li>
-
-                        <li class="list-group-item">Planning structured systems, selecting appropriate technologies, and creating intuitive user experiences with a focus on maintainability and practical use</li>
-
-                        <li class="list-group-item">Developing functional MVPs early in the process so applications can already be tested and used while new features are expanded iteratively</li>
-
-                        <li class="list-group-item">Building reliable, well-documented, and scalable solutions with clear communication throughout the development process</li>
-                    </ul>
-                    `
+    "ct-hero": "Full-Stack Django Developer with over two decades of programming experience. Focused on building SaaS products and internal tools with clean, scalable architectures. I enjoy transforming manual workflows and complex problems into simple, maintainable systems.",
 }

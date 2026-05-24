@@ -14,13 +14,11 @@ body {
     background-image: url("../../content/background.png");
     background-repeat: repeat;
     font-family: 'Inter', sans-serif !important;
-    /* background: var(--default-bgColor-0) !important; */
     padding: 0px 5px;
 }
 
 a {
     text-decoration: none;
-    /* color: var(--default-color-2); */
     color: white;
 }
 
@@ -53,6 +51,7 @@ a {
     padding: 0.2rem 0.8rem;
     box-shadow: inset 0 0 0 1px var(--default-color-3),
                 inset 0 0 100px rgba(129, 63, 195, 0.224);
+    background-color: var(--default-bgColor-0);
     --bs-btn-border-width: 1px;    
     --bs-btn-color: white;
     --bs-btn-border-color: var(--default-color-3);
@@ -65,6 +64,7 @@ a {
     --bs-btn-disabled-bg: transparent;
 }
 
+/* Buttons */
 .btn-outline-purple i {
     transition: color 0.2s ease;
 }
@@ -124,27 +124,10 @@ a {
     background-color: #281144;
 }
 
-/* Images */
-/* .img-wrapper {
-    height: 200px;
-    width: 100%;
-    overflow: hidden;
-    background-color: var(--default-bgColor-2);
-    border: 3px solid var(--default-bgColor-0);
-    border-radius: 30px 30px 0px 0px;
-}
-
-.img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-} */
-
 .avatar-img {
-    transform: translateY(15px);
-    height: 100%;
+    /* transform: translateY(15px); */
     z-index: 1;
+    height: 100%;
     width: 100%;
 }
 
@@ -186,8 +169,6 @@ ul.list-stars li {
 }
 
 .card-purple .card-header {
-    /* padding-left: 20px;
-    padding-top: 15px; */
     background-color: var(--default-bgColor-1);
     color: #ffffff;
 }
@@ -248,13 +229,11 @@ a:hover .card-purple {
 
     .avatar-img {
         position: absolute;
-        bottom: -35px;
-        left: 50%;
-        transform: translateX(-65%);
-        height: 100%;
+        right: 0;
+        bottom: 0px;
+        transform: translateY(36px);
         width: auto;
-        max-height: 400px;
-        aspect-ratio: inherit;
+        max-height: 500px;
         z-index: 1;
     }
 
@@ -272,30 +251,6 @@ a:hover .card-purple {
         overflow-y: auto;
     }
 
-    .fs-1 {
-        font-size: 2.5rem !important;
-    }
-
-    .fs-2 {
-        font-size: 2.125rem !important;
-    }
-
-    .fs-3 {
-        font-size: 1.812rem !important;
-    }
-
-    .fs-4 {
-        font-size: 1.5rem !important;
-    }
-
-    .fs-5 {
-        font-size: 1.375rem !important;
-    }
-
-    .fs-6 {
-        font-size: 1.25rem !important;
-    }
-
     .fs-7 {
         font-size: 1.12rem !important;
     }
@@ -305,7 +260,7 @@ a:hover .card-purple {
     }
 
     .fs-9 {
-        font-size: 0.8rem;
+        font-size: 0.8rem !important;
     }
 
     .order-md-6 {
@@ -313,18 +268,10 @@ a:hover .card-purple {
     }
 
     .order-md-7 {
-        order: 6 !important;
+        order: 7 !important;
     }
-}
-
-@media (min-width: 1733px) {
-    .avatar-img {
-        transform: translateX(-50%);
-    }
-}
-
-@media (min-width: 2150px) {
-    .avatar-img {
-        transform: translateX(-30%);
+    
+    .w-md-50 {
+        width: 50% !important;
     }
 }
