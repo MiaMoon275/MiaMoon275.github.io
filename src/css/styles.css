@@ -39,6 +39,23 @@ a {
     color: var(--default-color-3);
 }
 
+.my-tool-badge {
+    background-color: var(--default-bgColor-0);
+    /* background-color: #181818; */
+    border: 2px solid var(--default-bgColor-3);
+    height: 46px;
+}
+
+.django-badge img {
+    filter: brightness(2.3);
+}
+
+.tool-badge {
+    /* background-color: #181818; */
+    background-color: var(--default-bgColor-2) !important;
+    border: 2px solid var(--default-bgColor-3) !important;
+}
+
 .border-purple {
     border-style: solid;
     border-width: 3px;

@@ -15,8 +15,14 @@ export function loadTools(useCache) {
     Object.entries(MY_TOOLS).forEach(([tool, label]) => {
         const baseUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tool}/`;
 
+        let extraClass = ""
+
+        if(tool == "django") {
+            extraClass = "django-badge";
+        }
+        
         html += `
-            <span class="badge bg-dark m-1 d-inline-flex align-items-center gap-1 p-2">
+            <span class="badge my-tool-badge ${extraClass} m-1 d-inline-flex align-items-center gap-1 p-2">
                 <img src="${baseUrl}${tool}-original.svg" class="user-tool-badge"
                     alt="${label}"
                     width="32"

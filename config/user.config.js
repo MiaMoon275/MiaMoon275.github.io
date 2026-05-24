@@ -23,5 +23,5 @@ export const CERTIFICATES = {
 
 export const TEXT_CONTENT = {
     // "Element Id": "Text Content"
-    "ct-hero": "Full-Stack Django Developer with over two decades of programming experience. Focused on building SaaS products and internal tools with clean, scalable architectures. I enjoy transforming manual workflows and complex problems into simple, maintainable systems.",
+    "ct-hero": "I build software systems that turn complex problems into simple, reliable user experiences. Specialized in Django, API design, and building systems that solve meaningful problems.",
 }
