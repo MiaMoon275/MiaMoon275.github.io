@@ -90,7 +90,7 @@
 /* Responsive */
 @media (min-width: 768px) {
     .card-project {
-        width: 600px;
+        width: calc(50% - var(--bs-card-spacer-y) / 2);
     }
     .card-project .card-header {
         font-size: 21px;

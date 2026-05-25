@@ -61,17 +61,14 @@
                 <!-- Quick Info -->
                 <div class="col-12 col-md-4 order-2 order-md-1 ps-4 ps-md-3" style="z-index: 2;">
                     <div class="w-100 text-start fs-1 fw-bold">
-                        <div class="mb-2">
-                            Hi, I'm <span class="text-purple-3">Mia</span>
-                        </div>
-                            
-                        <div class="lh-sm mb-1">
-                            Python Developer<br>
+                        <span class="mb-1">Hi, I'm </span>
+                        <span class="text-purple-3">Mia</span>
+                        <div class="lh-sm mb-2">
+                            <div class="m-0 p-0">Python Developer</div>
                             <span class="text-purple-3">Django</span> Engineer
                         </div>
                     </div>
-                    <p id="ct-hero"></p>
-                    
+                    <p id="ct-hero" class="fs-6"></p>
                     <div id="my-tools" class="text-center text-md-start"></div>
                 </div>
 
@@ -82,13 +79,13 @@
                     <a href="mailto:mia.sophie.dev@gmail.com"
                     class="btn btn-outline-purple position-absolute top-0 end-0 fs-7 mt-2 me-3"
                     style="z-index: 1;">
-                        <i class="bi bi-send text-purple-3 me-2"></i>
+                        <i class="bi bi-send me-2"></i>
                         Have a Project in Mind?
                     </a>
                 </div>                
                 
                 <!-- Certifications-->
-                 <div class="col-12 col-md-3 order-5 order-md-3 d-flex align-items-stretch">
+                 <div class="col-12 col-md-3 order-5 order-md-3">
                     <div class="card card-purple rounded-3 mt-auto w-100">
                         <div class="card-header fs-3">
                             <i class="bi bi-trophy-fill text-purple-3 me-2"></i>
@@ -105,51 +102,51 @@
                     <div class="card card-purple rounded-3 w-100">
                         <div class="card-header fs-2">
                             <i class="bi bi-person-fill text-purple-3 me-2"></i>
-                            <span>What I Build</span>
+                            <span>Services</span>
                         </div>
                         <div class="card-body fs-7 text-secondary">      
                             <div class="container-fluid">
 
                                 <p class="mb-4 text-secondary">
-                                    I build intuitive digital products that solve real problems.
+                                    I ship digital products that solve real-world problems through intuitive, user-focused interfaces.
                                 </p>
 
                                 <div class="d-flex mb-3 align-items-start">
-                                    <div class="fs-2 text-purple-1 me-4">
+                                    <div class="fs-2 text-white me-4">
                                         <i class="bi bi-cloud-check"></i>
                                     </div>
                                     <div>
-                                        <div class="text-purple-1 fw-bold">SaaS Applications</div>
+                                        <div class="text-white fw-bold">SaaS Applications</div>
                                         Customer-facing platforms with clear information architecture and a polished user experience.
                                     </div>
                                 </div>
 
                                 <div class="d-flex mb-3 align-items-start">
-                                    <div class="fs-2 text-purple-1 me-4">
+                                    <div class="fs-2 text-white me-4">
                                         <i class="bi bi-gear-wide-connected"></i>
                                     </div>
                                     <div>
-                                        <div class="text-purple-1 fw-bold">Automation Systems</div>
+                                        <div class="text-white fw-bold">Automation Systems</div>
                                         Workflow automation that reduces manual work and keeps business processes running smoothly.
                                     </div>
                                 </div>
 
                                 <div class="d-flex mb-3 align-items-start">
-                                    <div class="fs-2 text-purple-1 me-4">
+                                    <div class="fs-2 text-white me-4">
                                         <i class="bi bi-code-slash"></i>
                                     </div>
                                     <div>
-                                        <div class="text-purple-1 fw-bold">API / Backend Architectures</div>
+                                        <div class="text-white fw-bold">API / Backend Architectures</div>
                                         Maintainable, scalable Django backends with structured data models and secure APIs.
                                     </div>
                                 </div>
 
                                 <div class="d-flex mb-3 align-items-start">
-                                    <div class="fs-2 text-purple-1 me-4">
+                                    <div class="fs-2 text-white me-4">
                                         <i class="bi bi-phone-flip"></i>
                                     </div>
                                     <div>
-                                        <div class="text-purple-1 fw-bold">Responsive Frontend Interfaces</div>
+                                        <div class="text-white fw-bold">Responsive Frontend Interfaces</div>
                                         Interfaces that make complex features simple to understand and easy to use on any device.
                                     </div>
                                 </div>
@@ -162,14 +159,28 @@
 
                 <!-- Projects -->
                 <div class="col-12 col-md-9 order-4 order-md-4 d-flex align-items-stretch">
-                    <div class="card card-purple overflow-hidden rounded-3 w-100">
-                        <div class="card-header fs-2">
-                            <i class="bi bi-box-seam-fill text-purple-3 me-2"></i> Projects
-                        </div>
-                        <div class="card-body">
-                            <div class="mb-2">
+                    <div class="container-fluid pb-2 pb-md-0 h-100">
+                        <div class="row h-100">
+
+                            <div class="col-12">
+                                <div class="card card-purple overflow-hidden rounded-3 w-100">
+                                    <div class="card-header fs-2">
+                                        <i class="bi bi-box-seam-fill text-purple-3 me-2"></i> Projects
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-2">
+                                        </div>
+                                        <div id="projects" class="project-scroll d-flex gap-3 overflow-auto pb-2 mt-0 mt-md-4"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div id="projects" class="project-scroll d-flex gap-3 overflow-auto pb-2 mt-0 mt-md-4"></div>
+                            
+                            <div class="col-12 d-flex align-items-stretch" style="filter: brightness(0.7);">
+                                <div class="card card-purple overflow-hidden rounded-3 w-100">
+                                    <div class="card-body">     
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

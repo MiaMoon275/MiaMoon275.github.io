@@ -250,7 +250,7 @@ a:hover .card-purple {
         bottom: 0px;
         transform: translateY(45px);
         width: auto;
-        max-height: 500px;
+        max-height: 450px;
         z-index: 1;
     }
 

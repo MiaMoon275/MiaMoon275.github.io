@@ -23,5 +23,5 @@ export const CERTIFICATES = {
 
 export const TEXT_CONTENT = {
     // "Element Id": "Text Content"
-    "ct-hero": "I build software systems that turn complex problems into simple, reliable user experiences. Specialized in Django, API design, and building systems that solve meaningful problems.",
+    "ct-hero": "I design modern user experiences<br>built on dependable foundations.",
 }
