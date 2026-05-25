@@ -237,7 +237,7 @@ a:hover .card-purple {
     }
 
     .certificate-icon {
-        font-size: 3.75rem;
+        font-size: 3rem;
     }
 
     .border-bottom-mobile {
@@ -250,7 +250,7 @@ a:hover .card-purple {
         bottom: 0px;
         transform: translateY(45px);
         width: auto;
-        max-height: 450px;
+        max-height: 300px;
         z-index: 1;
     }
 

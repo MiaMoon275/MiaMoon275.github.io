@@ -25,11 +25,11 @@ export function loadCertificates() {
 
                         <div class="col-9">
 
-                            <div class="card-header fs-6 lh-1 ps-0">
+                            <div class="card-header fs-6 lh-1 ps-0 fs-8">
                                 ${certificate.name}
                             </div>
 
-                            <div class="card-body d-flex justify-content-between fw-bold ps-0 pt-1">
+                            <div class="card-body d-flex justify-content-between fw-bold ps-0 pt-1 fs-9">
 
                                 <div class="text-purple-3">
                                     ${certificate.issuer}

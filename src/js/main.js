@@ -14,9 +14,9 @@ function loadAll() {
     const screenMdUp = window.innerWidth >= 768;
     
     loadTools(useCache);
+    loadTextContent();
     loadCertificates();
     loadProjects(screenMdUp);
-    loadTextContent();
     localStorage.setItem("next_fetch", Date.now() + CACHE_LIFETIME);
 }
 
