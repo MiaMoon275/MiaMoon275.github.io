@@ -1,0 +1,74 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+
+// Palette Colors
+$primary: #643bc7;
+$primary-2: #cd8af4;
+$info: #536aff;
+$dark: #050412;
+$dark-2: #1e1b4b;
+$super-dark: #0a0a1d;
+
+// Specific Colors
+$success: rgb(24, 255, 174);
+$warning: #ff82c4;
+$danger: #c21e9e;
+
+$theme-colors: (
+    "success": $success,
+    "primary": $purple-600,
+    "primary-2": $primary-2,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "dark": $dark,
+    "dark-2": $dark-2,
+);
+
+$body-bg: #050412;
+$body-color: $secondary;
+
+$card-bg: #0a0a1d;
+$card-border-color: #1e1b4b;
+$btn-border-radius: 3px;
+
+$border-radius: 1rem;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+    --primary: $primary;
+    --primary-2: $primary-2;
+    --dark: $dark;
+    --dark-2: $dark-2;
+    --super-dark: $super-dark;
+}
+
+/* Buttons */
+.btn-primary i {
+    
+}
+
+/* Scroll Bars */
+.scroll-purple {
+    scrollbar-color: #{$primary} #{$dark-2};
+    scrollbar-width: thin;
+}
+
+/* Cards */
+.card {
+    transition: all 0.2s ease;
+    border: 3px solid #{$dark-2};
+    background-color: #{$super-dark};
+    overflow: hidden;
+}
+
+.card .card-header {
+    border-bottom: none;
+}
+
+a:hover .card {
+    transform: translateY(-2px);
+    border-color: #{$primary-2} !important;
+}
