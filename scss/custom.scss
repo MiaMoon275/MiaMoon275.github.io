@@ -3,27 +3,29 @@
 
 
 // Palette Colors
-$primary: #643bc7;
-$primary-2: #cd8af4;
-$info: #536aff;
+$primary: #7b3ff2;
+$info: #c79dff;          // Highlights (Certificate Issuer, Special Elements)
 $dark: #050412;
-$dark-2: #1e1b4b;
+$dark-2: #2c1a62;        // Card Borders & Headers
 $super-dark: #0a0a1d;
 
 // Specific Colors
-$success: rgb(24, 255, 174);
-$warning: #ff82c4;
-$danger: #c21e9e;
+$success: #41d992;
+$warning: #ffb347;
+$danger: #ff82d1;
+
+// Effects
+$hover-glow: #8e52ff; 
 
 $theme-colors: (
-    "success": $success,
-    "primary": $purple-600,
-    "primary-2": $primary-2,
+    "primary": $primary,
+    "secondary": $secondary,
+    "dark": $dark,
+    "dark-2": $dark-2,      // Card Borders & Headers
     "info": $info,
+    "success": $success,
     "warning": $warning,
     "danger": $danger,
-    "dark": $dark,
-    "dark-2": $dark-2,
 );
 
 $body-bg: #050412;
@@ -38,16 +40,20 @@ $border-radius: 1rem;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 :root {
-    --primary: $primary;
-    --primary-2: $primary-2;
-    --dark: $dark;
-    --dark-2: $dark-2;
-    --super-dark: $super-dark;
+    // Main Theme Colors
+    --primary: #{$primary};
+    --info: #{$info};
+    --dark: #{$dark};
+    --dark-2: #{$dark-2};
+    --super-dark: #{$super-dark};
+    
+    //Effects
+    --hover-glow: #{$hover-glow};
 }
 
 /* Buttons */
-.btn-primary i {
-    
+.btn-primary:hover {
+    --bs-btn-hover-bg: #{$hover-glow} !important;    
 }
 
 /* Scroll Bars */
@@ -70,5 +76,5 @@ $border-radius: 1rem;
 
 a:hover .card {
     transform: translateY(-2px);
-    border-color: #{$primary-2} !important;
+    border-color: #{$hover-glow} !important;
 }

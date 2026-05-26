@@ -60,7 +60,7 @@ class ProjectCard {
                     <div class="project-company">
                         <div class="d-flex align-items-end justify-content-center gap-2">
                             <div>
-                                <i class="bi bi-building-fill text-info "></i>
+                                <i class="bi bi-building-fill"></i>
                                 <span class="me-2">
                                     ${this.project.company ?
                                         this.project.company
@@ -69,7 +69,7 @@ class ProjectCard {
                             </div>       
                         
                             <div class="d-none d-md-block">
-                                <i class="bi bi-geo-alt-fill text-info me-2"></i>
+                                <i class="bi bi-geo-alt-fill me-2"></i>
                                 <span>
                                     ${this.project.location ?
                                         this.project.location

@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         
+        <link rel="stylesheet" type="text/css" href="src/css/icons.css">
         <link rel="stylesheet" type="text/css" href="src/css/styles.css">
         <link rel="stylesheet" type="text/css" href="src/css/project-cards.css">
         
@@ -25,12 +26,11 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row gy-3">
 
                 <!-- Content Start-->
-                <div class="col-12 col-md-9 d-flex align-items-stretch">
-                    <div class="w-100">
-                        <div class="row row-gap-3">
+                <div class="col-12 col-md-9">
+                        <div class="row gy-3">
                             
                             <!-- Quick Info -->
                             <div class="col-12 col-md-6" style="z-index: 2;">
@@ -169,7 +169,7 @@
 
                                             <div class="border-start border-primary ps-4 pt-3 position-relative" style="border-left-width: 10px;">
                                                 <div class="timeline-mark">
-                                                    <i class="timeline-dot bi bi-circle-fill text-primary fs-9 position-absolute start-0"></i>
+                                                    <i class="timeline-dot bi bi-circle-fill text-info fs-9 position-absolute start-0"></i>
                                                     <span class="fs-5 text-white">2024 <i class="bi bi-dash"></i> Today</span>
                                                     <p class="ms-4 fs-9">
                                                         Completed Harvard's CS50x and discovered my passion for modern web development with Django, Bootstrap, and JavaScript.
@@ -177,7 +177,7 @@
                                                 </div>
                                                 
                                                 <div class="timeline-mark">
-                                                    <i class="timeline-dot bi bi-circle-fill text-primary fs-9 position-absolute start-0"></i>
+                                                    <i class="timeline-dot bi bi-circle-fill text-info fs-9 position-absolute start-0"></i>
                                                     <span class="fs-5 text-white">2010 <i class="bi bi-dash"></i> 2023</span>
                                                     <p class="ms-4 fs-9">
                                                         Learned Java and OOP while experimenting with online games, LibGDX, LWJGL, Kryonet, Unity, and C#.
@@ -185,7 +185,7 @@
                                                 </div>
                                                 
                                                 <div class="timeline-mark">
-                                                    <i class="timeline-dot bi bi-circle-fill text-primary fs-9 position-absolute start-0"></i>
+                                                    <i class="timeline-dot bi bi-circle-fill text-info fs-9 position-absolute start-0"></i>
                                                     <span class="fs-5 text-white">2004 <i class="bi bi-dash"></i> 2009</span>
                                                     <p class="ms-4 fs-9">
                                                         Started programming with PureBasic by building experimental apps, games, and media tools.
@@ -215,7 +215,6 @@
                             </div>
                             
                         </div>
-                    </div>
                 </div>
                 <!-- Contend End-->
 
@@ -230,6 +229,8 @@
                                     <div class="card-body d-flex flex-column gap-4">
                                         <div>
                                             <i class="bi bi-circle-fill text-success me-2"></i>
+                                            <i class="bi bi-circle-fill text-warning me-2"></i>
+                                            <i class="bi bi-circle-fill text-danger me-2"></i>
                                             <span class="text-white me-2 fs-4">Available for Work</span>
                                         </div>
                                         <div class="fs-5">
@@ -294,12 +295,12 @@
 
                         </div>
                     </div>
+                    <!-- Sidebar End -->
+
+                    <!-- Footer-->
                 </div>
-                <!-- Sidebar End -->
-            </div>
-            <div class="row row-gap-3">
-                <div class="col-12 m-3">
-                    <div class="border border-primary rounded-3 px-4 py-2 d-flex justify-content-start align-items-center">
+                <div class="col-12 m-6">
+                    <div class="border border-primary rounded-3 px-4 py-2 d-flex justify-content-start align-items-center mt-3">
                         <i class="bi bi-rocket-takeoff text-primary fs-1"></i>
                         <div class="ms-3">
                             <div class="text-white fs-6">Have a Project im Mind?</div>
@@ -311,16 +312,21 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="mt-5 pt-4 border-top border-primary d-flex justify-content-between">
-                <div>
-                    <i class="bi bi-c-circle"></i> 
-                    <span>2026 by Mia Sophie Emerick Schober. All rights reserved.</span>
+
+                
+                <div class="col-12">
+                    <div class="mt-2 pt-4 border-top border-dark-2 d-flex justify-content-between">
+                        <div>
+                            <i class="bi bi-c-circle"></i> 
+                            <span>2026 by Mia Sophie Emerick Schober. All rights reserved.</span>
+                        </div>
+                        <div>
+                            <span>Designed with</span>
+                            <i class="bi bi-heart-fill text-primary ms-1"></i>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <span>Designed with</span>
-                    <i class="bi bi-heart-fill text-primary"></i>
-                </div>
+                <!-- Footer End-->
             </div>
         </div>
     </body>
