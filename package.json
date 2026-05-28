@@ -1,0 +1,25 @@
+{
+  "name": "miamoon275.github.io",
+  "version": "1.0.0",
+  "description": "Welcome to my personal portfolio website 👋   This project showcases my understanding, work, and passion for modern web development.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiaMoon275/MiaMoon275.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MiaMoon275/MiaMoon275.github.io/issues"
+  },
+  "homepage": "https://github.com/MiaMoon275/MiaMoon275.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "sass": "^1.100.0"
+  }
+}

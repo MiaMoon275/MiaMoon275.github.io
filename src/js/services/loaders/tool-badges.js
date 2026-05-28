@@ -22,11 +22,11 @@ export function loadTools(useCache) {
         }
         
         html += `
-            <span class="badge my-tool-badge ${extraClass} m-1 d-inline-flex align-items-center gap-1 p-2">
-                <img src="${baseUrl}${tool}-original.svg" class="user-tool-badge"
+            <span class="badge my-tool-badge ${extraClass} text-secondary m-1 d-inline-flex align-items-center gap-1 p-2 ">
+                <img src="${baseUrl}${tool}-original.svg"
                     alt="${label}"
-                    width="32"
-                    height="32"
+                    width="24"
+                    height="24"
                     onerror="this.onerror=null; this.src='${baseUrl}${tool}-plain.svg'">
                 ${label}
             </span>
