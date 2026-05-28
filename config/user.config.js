@@ -1,15 +1,3 @@
-export const MY_TOOLS = {
-    python: "Python",
-    django: "Django",
-    html5: "HTML5",
-    css3: "CSS3",
-    javascript: "JavaScript",
-    bootstrap: "Bootstrap",
-    git: "Git",
-    vscode: "Visual Studio Code",
-    visualstudio: "Visual Studio",
-};
-
 export const CERTIFICATES = {
     "CS50x": {
         "name": "CS50x - Introduction to Computer Science",
@@ -23,5 +11,47 @@ export const CERTIFICATES = {
 
 export const TEXT_CONTENT = {
     // "Element Id": "Text Content"
-    "ct-hero": "I design modern user experiences<br>built on dependable foundations.",
+    "ct-hero": "Focused on workflow automation,<br>internal tools, and reliable business software."
 }
+
+export const MY_TOOLS = {
+    python: "Python",
+    django: "Django",
+    html5: "HTML5",
+    css3: "CSS3",
+    javascript: "JavaScript",
+    bootstrap: "Bootstrap",
+    git: "Git",
+    vscode: "Visual Studio Code",
+    visualstudio: "Visual Studio",
+};
+
+export const MY_TECHS = {
+    "Python / Django": 92,
+    "Bootstrap / SCSS": 90,
+    "JavaScript": 80,
+    "MS SQL / MySQL": 78,
+    "Git": 82,
+}
+
+export const MY_SKILLS = {
+    "Django Backend Architecture": 92,
+    "Responsive Web Design": 90,
+    "Workflow Automation": 92,
+    "Relational Data Modeling": 94,
+    "API Design & Serialization": 86,
+}
+
+// TODO: Implement connect options
+// export const CONNECT_OPTIONS = [
+//     {
+//         "name": "LinkedIn",
+//         "icon": "bi-linkedin",
+//         "href": "https://www.linkedin.com/in/mia-sophie-emerick-schober-23352a197/",
+//     },
+//     {
+//         "name": "E-Mail",
+//         "icon": "bi-envelope-at-fill",
+//         "href": "mailto:mia.sophie.dev@gmail.com",
+//     }
+// ]

@@ -2,7 +2,7 @@ export const PROJECTS = [
     // preview options: [image-path, name, hidden]
     {
         "name": "Membership Management Platform",
-        "description": "Developed for Berlin’s largest swimming club with over 5,000 active members, this platform replaces manual administrative workflows with scalable automation and centralized data management.",
+        "description": "Developed and currently extending for Berlin's largest swimming club with over 5,000 active members. The system replaces manual administrative workflows for membership management, payments, and document processing.",
         "tools": ["Python", "Django", "Bootstrap", "SQL", "Workflow automation", "System integration" , "Authentication", "Encryption", "DSGVO"],
         "readme": "beitrittsverwaltung.md",
         "company": "Schwimm-Gemeinschaft Neukölln e.V.",
@@ -14,7 +14,7 @@ export const PROJECTS = [
 
     {
         "name": "Membership Photo Capture System",
-        "description": "Built under a tight seasonal deadline, this real-time photo capture system enabled the production of 5,600 membership cards by automating member data association and image processing.",
+        "description": "Built under a tight seasonal deadline. This system enabled the production of 5,600 membership cards by automating member data association and image processing in real time.",
         "tools": ["Python", "C#", "SQL", "Camera Integration", "Real-Time Systems", "Data Pipeline", "Network Storage", "Workflow Optimization"],
         "company": "Schwimm-Gemeinschaft Neukölln e.V.",
         "location": "Germany",
@@ -25,7 +25,7 @@ export const PROJECTS = [
     
     {
         "name": "Embroidery User Interface",
-        "description": "Django-based embroidery management system running on a single-board computer. It centralizes design management, real-time previews, and enables direct USB integration with embroidery machines.",
+        "description": "Django-based embroidery management system running on a single-board computer. Provides design management, color adjustments with real-time previews and direct USB integration with embroidery machines.",
         "tools": ["Python", "Django", "SVG Processing", "Hardware Integration", "Automation", "Real-Time Preview"],
         "company": "Individual Client",
         "location": "Germany",
@@ -36,7 +36,7 @@ export const PROJECTS = [
 
     {
         "name": "Secure Sync & Maintenance System",
-        "description": "Secure remote file synchronization tool enabling maintenance and troubleshooting without client interaction, while ensuring data integrity and protection of sensitive information.",
+        "description": "Built for upcoming maintenance tasks, this remote file synchronization tool allows maintenance and troubleshooting without client interaction, while ensuring data integrity and protection of sensitive information.",
         "tools": ["Python", "SFTP", "Paramiko", "JSON", "File synchronisation", "Checksum validation", "SQLite Backup", "Logging"],        
         "company": "Mia E.S. - Software Development",
         "location": "Germany",
@@ -47,7 +47,7 @@ export const PROJECTS = [
 
     {
         "name": "Software Engineering Portfolio",
-        "description": "Personal portfolio website showcasing selected projects, development approach, and expertise in Django-based full-stack development.",
+        "description": "Personal portfolio website, created to showcase selected projects, development approach, and expertise in Django-based full-stack development, as well as provide direct insights into my UI/UX design methods.",
         "tools": ["HTML", "CSS", "JavaScript", "Bootstrap", "Responsive Design"],
         "company": "Mia E.S. - Software Development",
         "location": "Germany",
@@ -57,3 +57,10 @@ export const PROJECTS = [
         "sourceUrl": "https://github.com/MiaMoon275/MiaMoon275.github.io",
     },    
 ]
+
+export const CURRENT_PROJECT = {
+    "description": "Extending the previously created membership management system with additional workflow automation.",
+    "focus": "Payment Service",
+    "start": "2026-05-01T00:00:00+01:00",
+    "end": "2027-01-31T23:59:59+01:00"
+}

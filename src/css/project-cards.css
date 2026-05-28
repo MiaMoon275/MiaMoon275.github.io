@@ -7,16 +7,10 @@
     --pcard-default-mobile-line-height: 1.2;
 }
 
-.project-scroll {
-    scrollbar-color: var(--default-color-3) var(--default-bgColor-3);
-    scrollbar-width: thin;
-}
-
 .card-project {
     width: 100%;
-    color: rgba(var(--bs-secondary-rgb),var(--bs-text-opacity));
-    border: 3px solid var(--default-bgColor-3);
-    background-color: var(--default-bgColor-1);
+    border: 3px solid var(--default-bgColor-4);
+    background-color: var(--default-bgColor-2);
     overflow: hidden;
 }
 
@@ -24,8 +18,6 @@
     font-size: 16px;
     line-height: 1;
     text-align: center;
-    background-color: var(--default-bgColor-3);
-    color: var(--default-color-1);
     font-weight: bold;
 }
 
@@ -34,7 +26,6 @@
 }
 
 .card-project .card-body {
-    color: var(--default-color-0);
     padding: 0px;
 }
 
@@ -99,7 +90,7 @@
     .card-project .img-wrapper {
         height: 100%;
         overflow: hidden;
-        background-color: var(--default-bgColor-2);
+        background-color: var(--default-bgColor-3);
     }
 
     .card-project .img-wrapper img {
