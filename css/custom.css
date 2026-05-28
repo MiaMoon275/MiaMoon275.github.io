@@ -4872,7 +4872,7 @@ textarea.form-control-lg {
 }
 .progress,
 .progress-stacked {
-  --bs-progress-height: 1rem;
+  --bs-progress-height: 0.5rem;
   --bs-progress-font-size: 0.75rem;
   --bs-progress-bg: var(--bs-secondary-bg);
   --bs-progress-border-radius: var(--bs-border-radius);
@@ -11869,8 +11869,9 @@ textarea.form-control-lg {
 }
 
 /* Buttons */
-.btn-primary:hover {
-  --bs-btn-hover-bg: #8e52ff !important;
+.btn-primary:hover,
+.btn-outline-primary:hover {
+  --bs-btn-hover-bg: #8e52ff;
 }
 
 /* Scroll Bars */
@@ -11893,7 +11894,17 @@ textarea.form-control-lg {
 
 a:hover .card {
   transform: translateY(-2px);
-  border-color: #8e52ff !important;
+  border-color: #8e52ff;
+}
+
+/* Progress Bars */
+.progress {
+  background-color: #2c1a62;
+}
+
+.progress-bar {
+  border-radius: 0.5rem;
+  background-color: #7b3ff2;
 }
 
 /*# sourceMappingURL=custom.css.map */

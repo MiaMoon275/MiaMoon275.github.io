@@ -3,6 +3,7 @@ import { loadTextContent } from "./services/loaders/text-content.js";
 import { loadCertificates } from "./services/loaders/certificates.js";
 import { loadProjects } from "./services/loaders/projects.js";
 import { loadTools } from "./services/loaders/tool-badges.js";
+import { loadExperience } from "./services/loaders/experience.js";
 
 // currently only caching tool-badges
 const MILLISECONDS_PER_HOUR = 60 * 60 * 1000;
@@ -17,6 +18,7 @@ function loadAll() {
     loadTextContent();
     loadCertificates();
     loadProjects(screenMdUp);
+    loadExperience();
     localStorage.setItem("next_fetch", Date.now() + CACHE_LIFETIME);
 }
 

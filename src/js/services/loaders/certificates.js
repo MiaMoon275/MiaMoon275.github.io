@@ -23,13 +23,13 @@ export function loadCertificates() {
                             `}
                         </div>
 
-                        <div class="col-9">
+                        <div class="col-9 fs-8">
 
-                            <div class="card-header text-white fs-6 lh-1 ps-0 fs-8">
+                            <div class="card-header text-white fs-6 fw-bold lh-1 ps-0">
                                 ${certificate.name}
                             </div>
 
-                            <div class="card-body d-flex justify-content-between fw-bold ps-0 pt-1 fs-9">
+                            <div class="card-body d-flex justify-content-between fw-bold ps-0 pt-1">
 
                                 <div class="text-info">
                                     ${certificate.issuer}

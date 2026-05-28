@@ -45,15 +45,15 @@ a {
 }
 
 .fs-7 {
-    font-size: 0.9rem;
+    font-size: .9rem;
 }
 
 .fs-8 {
-    font-size: 0.8rem;
+    font-size: .8rem;
 }
 
 .fs-9 {
-    font-size: 0.6rem;
+    font-size: .6rem;
 }
 
 
@@ -149,15 +149,11 @@ ul.list-stars li {
         position: absolute;
         right: 0;
         bottom: 0px;
-        transform: translateY(123px);
+        transform: translateY(130px);
         width: auto;
         height: auto;
         max-height: 450px;
         z-index: 1;
-    }
-
-    .btn-outline-purple {
-        padding: 0.3rem 0.9rem;
     }
 
     .carousel-item {
@@ -175,11 +171,11 @@ ul.list-stars li {
     }
 
     .fs-8 {
-        font-size: 1rem !important;
+        font-size: .9rem !important;
     }
 
     .fs-9 {
-        font-size: 0.8rem !important;
+        font-size: .7rem !important;
     }
 
     .order-md-6 {
@@ -197,10 +193,9 @@ ul.list-stars li {
 
 .timeline-dot {
     transform: translate(-6.5px, 6px);
-
     transition:
-        transform 0.2s ease,
-        color 0.2s ease;
+        transform .2s ease,
+        color .2s ease;
 }
 
 .timeline-mark:hover .timeline-dot {
