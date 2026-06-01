@@ -6,6 +6,7 @@
 // $primary: #7b3ff2;
 $primary: #4f20f4;
 $highlight: #773aa2;
+$complementary: #C6F420;
 $info: #c79dff;          // Highlights (Certificate Issuer, Special Elements)
 $dark: #050412;
 $dark-2: #2c1a62;        // Card Borders & Headers
@@ -23,6 +24,7 @@ $hover-glow: #8e52ff;
 $theme-colors: (
     "primary": $primary,
     "secondary": $secondary,
+    "complementary": $complementary,
     "dark": $dark,
     "dark-2": $dark-2,      // Card Borders & Headers
     "info": $info,
@@ -114,6 +116,24 @@ $progress-height: 0.5rem;
     -webkit-text-fill-color: transparent;
 }
 
+/* Main attention text */
+.complementary-gradient {
+    background: linear-gradient(
+        180deg,
+        #f0dcff 0%,
+        #c86dff 10%,
+        #ffb15e 50%,
+        #c86dff 90%,
+        #f0dcff 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 18px rgba(255, 150, 70, 0.08);
+}
+
 .bg-highlight-gradient {
     background: linear-gradient(45deg, #cd61f823, #1b2ab138);
 }
@@ -127,7 +147,8 @@ $progress-height: 0.5rem;
 /* Cards */
 .card {
     transition: all 0.2s ease;
-    background: linear-gradient(135deg, #14132e, #090b20);
+    // background: linear-gradient(135deg, #14132e, #090b20);
+    background: linear-gradient(135deg, #0e0e40, #06081d);
     overflow: hidden;
 }
 

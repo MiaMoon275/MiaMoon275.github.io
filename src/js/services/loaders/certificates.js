@@ -19,7 +19,7 @@ export function loadCertificates() {
                             ${certificate.logoUrl ? `
                                 <img src="${certificate.logoUrl}" class="logo-small" alt="logo">
                             `: `
-                                </i><i class="bi ${icon} purple-gradient-accent icon-big"></i>
+                                </i><i class="bi ${icon} text-white icon-big"></i>
                             `}
                         </div>
 
