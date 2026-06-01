@@ -8,10 +8,36 @@
 }
 
 .card-project {
+    position: relative;
     width: 100%;
-    /* border: 3px solid var(--default-bgColor-4); */
-    background-color: var(--default-bgColor-2);
     overflow: hidden;
+    border-radius: 16px;
+    background: #0a0a1d;
+    margin-top: 5px;
+    transition: all 0.6s ease-in-out;
+}
+
+.card-project::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px; /* border width */
+
+    /* background: linear-gradient(135deg, #7b3ff2, #896bed, #050412); */
+    background: linear-gradient(135deg, #7b3ff2 50%, transparent 93%, #f2873f);
+    border-radius: inherit;
+
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+}
+
+.card-project:hover {
+    transform: translateY(-5px);
 }
 
 .card-project .card-header {
