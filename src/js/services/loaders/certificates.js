@@ -25,17 +25,17 @@ export function loadCertificates() {
 
                         <div class="col-9 fs-8">
 
-                            <div class="card-header text-white fs-6 fw-bold lh-1 ps-0">
+                            <div class="card-header fs-6 fw-bold lh-1 ps-0">
                                 ${certificate.name}
                             </div>
 
                             <div class="card-body d-flex justify-content-between fw-bold ps-0 pt-1">
 
-                                <div class="text-info">
+                                <div class="text-white">
                                     ${certificate.issuer}
                                 </div>
 
-                                <div class="text-secondary">
+                                <div class="text-white">
                                     ${certificate.issuedYear}
                                 </div>
 

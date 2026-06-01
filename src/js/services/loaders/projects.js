@@ -8,9 +8,9 @@ class ProjectCard {
 
     getHtml(project) {
         return `            
-            <div class="card card-project border border-dark-2 d-flex flex-column flex-shrink-0">
+            <div class="card card-project d-flex flex-column flex-shrink-0">
                         
-                <div class="card-header text-white bg-dark-2">
+                <div class="card-header text-white ">
                     <div class="project-name text-truncate">
                         ${this.project.name ? this.project.name : "No name available"}
                     </div>
