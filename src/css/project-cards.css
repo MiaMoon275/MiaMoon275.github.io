@@ -9,7 +9,7 @@
 
 .card-project {
     width: 100%;
-    border: 3px solid var(--default-bgColor-4);
+    /* border: 3px solid var(--default-bgColor-4); */
     background-color: var(--default-bgColor-2);
     overflow: hidden;
 }
@@ -60,7 +60,7 @@
     height: 20px;
     display: flex;
     align-items: center;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 
     font-size: 12px;
     padding: 8px;

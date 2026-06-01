@@ -16,10 +16,8 @@ a {
 }
 
 .my-tool-badge {
-    background-color: var(--default-bgColor-1);
-    /* background-color: #181818; */
+    background: linear-gradient(135deg, #282828, #1a1a1a);
     border: 2px solid var(--default-bgColor-4);
-    height: 46px;
 }
 
 .django-badge img {
@@ -145,11 +143,22 @@ ul.list-stars li {
         border: none;
     }
 
+    
+    .bg-hero {
+        background-image: url("/content/header-bg.png");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+        width: auto;
+        height: auto;
+        min-height: 550px !important;
+    }
+
     .avatar-img {
         position: absolute;
-        right: 0;
+        left: 0;
         bottom: 0px;
-        transform: translateY(130px);
+        transform: translateY(37px);
         width: auto;
         height: auto;
         max-height: 450px;
