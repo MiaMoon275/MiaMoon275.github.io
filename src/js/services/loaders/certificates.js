@@ -19,19 +19,19 @@ export function loadCertificates() {
                             ${certificate.logoUrl ? `
                                 <img src="${certificate.logoUrl}" class="logo-small" alt="logo">
                             `: `
-                                </i><i class="bi ${icon} text-white icon-big"></i>
+                                </i><i class="bi ${icon} purple-gradient-accent icon-big"></i>
                             `}
                         </div>
 
                         <div class="col-9 fs-8">
 
-                            <div class="card-header fs-6 fw-bold lh-1 ps-0">
+                            <div class="card-header fs-6 fw-bold text-white lh-1 ps-0">
                                 ${certificate.name}
                             </div>
 
                             <div class="card-body d-flex justify-content-between fw-bold ps-0 pt-1">
 
-                                <div class="text-white">
+                                <div class="">
                                     ${certificate.issuer}
                                 </div>
 

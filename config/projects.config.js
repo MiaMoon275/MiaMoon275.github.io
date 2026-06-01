@@ -57,10 +57,3 @@ export const PROJECTS = [
         "sourceUrl": "https://github.com/MiaMoon275/MiaMoon275.github.io",
     },    
 ]
-
-export const CURRENT_PROJECT = {
-    "description": "Extending the previously created membership management system with additional workflow automation.",
-    "focus": "Payment Service",
-    "start": "2026-05-01T00:00:00+01:00",
-    "end": "2027-01-31T23:59:59+01:00"
-}

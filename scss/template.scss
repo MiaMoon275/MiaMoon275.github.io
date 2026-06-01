@@ -1,0 +1,251 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+
+// ======================================================
+// 🎨 BASE PALETTE
+// ======================================================
+
+$primary: #7b3ff2;
+$info: #c79dff;
+$dark: #050412;
+$dark-2: #2c1a62;
+$super-dark: #0a0a1d;
+
+$success: #41d992;
+$warning: #ffb347;
+$danger: #ff82d1;
+
+$hover-glow: #8e52ff;
+
+
+// ======================================================
+// THEME MAP
+// ======================================================
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "dark": $dark,
+    "info": $info,
+    "success": $success,
+    "warning": $warning,
+    "danger": $danger,
+);
+
+
+// ======================================================
+// GLOBAL STYLES
+// ======================================================
+
+$body-bg: $dark;
+$body-color: $secondary;
+
+$card-bg: $super-dark;
+$card-border-color: $dark-2;
+
+$border-radius: 1rem;
+$progress-height: 0.5rem;
+
+
+// ======================================================
+// BOOTSTRAP IMPORT
+// ======================================================
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+// ======================================================
+// ROOT VARIABLES
+// ======================================================
+
+:root {
+    --primary: #{$primary};
+    --info: #{$info};
+    --dark: #{$dark};
+    --dark-2: #{$dark-2};
+    --super-dark: #{$super-dark};
+    --hover-glow: #{$hover-glow};
+}
+
+
+// ======================================================
+// 🌈 TEXT GRADIENTS
+// ======================================================
+
+// Variant 1 (Purple Neon Classic)
+.purple-gradient-v1 {
+    background: linear-gradient(90deg, #7b3ff2, #c79dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// Variant 2 (Electric Pink Glow)
+.purple-gradient-v2 {
+    background: linear-gradient(90deg, #8e52ff, #ff82d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// Current Choice
+.purple-gradient {
+    background: linear-gradient(135deg, #cc61f8, #{$primary});
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+// ======================================================
+// 🧱 CARDS
+// ======================================================
+
+// Variant 1: Glass Glow Card (Default Premium Look)
+.card {
+    transition: all 0.25s ease;
+    border: 2px solid $dark-2;
+    background: rgba(10, 10, 29, 0.85);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: $hover-glow;
+    box-shadow: 0 10px 30px rgba(123, 63, 242, 0.25);
+}
+
+// Variant 2: Minimal Border Card
+.card-minimal {
+    border: 1px solid rgba(123, 63, 242, 0.2);
+    background: $super-dark;
+    transition: all 0.2s ease;
+}
+
+.card-minimal:hover {
+    border-color: $primary;
+    box-shadow: none;
+}
+
+
+// ======================================================
+// 🔘 BUTTONS
+// ======================================================
+
+// Variant 1: Primary Glow Button
+.btn-primary {
+    background: linear-gradient(135deg, $hover-glow, $primary) !important;
+    // border: 5px solid linear-gradient(90deg, $white, $dark-2);
+    box-shadow: 0 6px 20px rgba(123, 63, 242, 0.25);
+    transition: all 0.2s ease;
+}
+
+.btn-border {
+  padding: 5px;
+  background: linear-gradient(90deg, $white, $dark-2);
+  display: inline-block;
+}
+
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(123, 63, 242, 0.4);
+}
+
+// Variant 2: Soft Purple Button
+.btn-primary-soft {
+    background: rgba(123, 63, 242, 0.15);
+    border: 1px solid rgba(123, 63, 242, 0.4);
+    color: white;
+}
+
+.btn-primary-soft:hover {
+    background: rgba(123, 63, 242, 0.3);
+    border-color: $primary;
+}
+
+
+// Outline Primary Variants
+
+.btn-outline-primary {
+    border: 1px solid $primary;
+    color: $primary;
+}
+
+.btn-outline-primary:hover {
+    background: $primary;
+    color: white;
+}
+
+.btn-outline-primary-soft {
+    border: 1px solid rgba(123, 63, 242, 0.4);
+    color: $info;
+}
+
+.btn-outline-primary-soft:hover {
+    border-color: $hover-glow;
+    color: white;
+}
+
+
+// ======================================================
+// 🧭 FOOTER CTA
+// ======================================================
+
+// Variant 1: Glow CTA (Hero Footer Style)
+.footer-cta {
+    background: linear-gradient(135deg, rgba(123,63,242,0.15), rgba(10,10,29,0.8));
+    border: 1px solid rgba(123,63,242,0.4);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 40px rgba(123,63,242,0.15);
+}
+
+// Variant 2: Clean Glass CTA
+.footer-cta-soft {
+    background: rgba(10, 10, 29, 0.6);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+}
+
+
+// ======================================================
+// 📊 PROGRESS BARS
+// ======================================================
+
+.progress {
+    background-color: $dark-2;
+}
+
+.progress-bar {
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg, $primary, $hover-glow);
+}
+
+
+// ======================================================
+// 🧭 LINKS / HOVER FX
+// ======================================================
+
+a {
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: $hover-glow;
+}
+
+
+// ======================================================
+// ✨ SMALL MICRO-INTERACTIONS
+// ======================================================
+
+.glow-hover {
+    transition: all 0.2s ease;
+}
+
+.glow-hover:hover {
+    text-shadow: 0 0 10px rgba(123,63,242,0.6);
+    transform: translateY(-1px);
+}

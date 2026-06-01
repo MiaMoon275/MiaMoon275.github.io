@@ -3,7 +3,8 @@
 
 
 // Palette Colors
-$primary: #7b3ff2;
+// $primary: #7b3ff2;
+$primary: #4f20f4;
 $highlight: #773aa2;
 $info: #c79dff;          // Highlights (Certificate Issuer, Special Elements)
 $dark: #050412;
@@ -62,11 +63,19 @@ $progress-height: 0.5rem;
 /* Meteor trail */
 .accent-line {
     position: relative;
-    width: 120px;
+    width: 32%;
     height: 3px;
 
+    margin-right: 45%;
     background: linear-gradient(90deg, transparent, $primary);
-    border-radius: 999px;
+    border-radius: 99px;
+}
+
+@media (min-width: 768px) {
+    .accent-line {
+        margin-right: none;
+    }
+
 }
 
 /* Meteor head */
@@ -77,12 +86,12 @@ $progress-height: 0.5rem;
     top: 50%;
     right: 0;
 
-    width: 8px;
-    height: 6px;
+    width: 7px;
+    height: 200%;
 
-    background: $danger;
+    background: $info;
     border-radius: 50%;
-    border: 0.5px solid $primary;
+    border: 0.5px solid $info;
 
     transform: translate(50%, -50%);
 
@@ -93,8 +102,14 @@ $progress-height: 0.5rem;
 }
 
 /* Text Gradients */
+.purple-gradient-accent {
+    background: linear-gradient(190deg, #b53ad1, 60%, #{$primary});
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .purple-gradient {
-    background: linear-gradient(135deg, #d78ef4, #{$primary});
+    background: linear-gradient(190deg, #{$info}, 35%, #{$primary}, transparent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

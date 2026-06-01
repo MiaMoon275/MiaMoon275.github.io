@@ -11,6 +11,10 @@ a {
     color: white;
 }
 
+.sm-image-stretch{
+    object-fit: cover;
+}
+
 #projects {
     min-height: 300px;
 }

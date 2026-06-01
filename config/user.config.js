@@ -12,7 +12,9 @@ export const CERTIFICATES = {
 export const TEXT_CONTENT = {
     // "Element Id": "Text Content"
     // "ct-hero": "Focused on workflow automation,<br>internal tools, and reliable business software."
-    "ct-hero": "I build workflow automation systems and business software that save time, reduce manual work, and help teams focus on what matters."
+    "ct-hero": `I build <span class='purple-gradient-accent fs-4'>workflow automation systems</span> and
+                <br> <span class='purple-gradient fs-4'>business software</span> that save time, reduce
+                <br >manual work, and help teams focus on what matters.`
 }
 
 export const MY_TOOLS = {

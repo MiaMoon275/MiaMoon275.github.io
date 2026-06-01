@@ -25,33 +25,36 @@
 
     </head>
     <body>
-        <div class="container py-3 py-lg-4">
-            <div class="row g-4 align-items-stretch">
+        <div class="container-fluid container-md py-3 py-md-4">
+            <div class="row g-4 align-items-stretch">               
 
                 <!-- Content Start-->                
-                
-                <!-- Major improvement: hero now uses one consistent heading stack and action rhythm -->
-                <section class="col-12 bg-hero">
+                <section class="col-12 w-100 bg-hero position-relative">
 
-                    <!-- Hero Text -->
-                    <div class="w-75 z-2 d-flex flex-column justify-content-center gap-4 h-100">
-                        
-                        <!-- Availability -->
-                        <div>
-                            <span class="badge border border-highlight bg-dark d-inline-flex align-items-center px-3 py-2">
+                    <!-- Availability -->
+                    <!-- <div class="col-12 w-100 d-flex flex-column align-items-end"> -->
+                        <span class="badge border border-primary bg-dark position-absolute top-0 end-0 me-2">
+                            <div class="d-inline-flex align-items-center px-2 py-1">
                                 <i class="bi bi-circle-fill text-success me-2"></i>
-                                <span class="text-light fs-5">Available for Work</span>
-                            </span>
-                        </div>         
+                                <span class="text-info fs-5">Available for Work</span>
+                            </div>
+                        </span>
+                    <!-- </div> -->
+
+                    <!-- Hero Section -->
+                    <div class="z-2 d-flex w-100 w-md-50 flex-column justify-content-center align-items-center align-items-md-start gap-4 h-100">
+                        
+                        <!-- Avatar Image Movile-->
+                        <img class="sm-image-stretch d-flex d-md-none" src="content/avatar.png">
 
                         <!-- Hero Text-->
-                        <div class="w-100 text-start pe-md-4">
+                        <div class="w-100 text-center text-md-start pe-md-4">
                             <h1 class="display-3 fw-bold text-white lh-1 mb-0">
 
                                 <span class="d-block mb-1">
                                     Hi, I'm 
                                     
-                                    <span class="purple-gradient text-primary position-relative d-inline-flex align-items-start">
+                                    <span class="purple-gradient-accent text-primary position-relative d-inline-flex align-items-start">
                                         Mia
                                         <i class="bi bi-stars star-icon star-glow fs-3"></i>
                                     </span>
@@ -68,24 +71,17 @@
                             </h1>
                         </div>
 
-                        <div class="w-50 lh-1">
-                            <div class="accent-line mb-3"></div>
-                            <p id="ct-hero" class="fs-5 text-light lh-md pe-md-4"></p>
-                        </div>
+                        <div class="accent-line mb-3"></div>
+                        <p id="ct-hero" class="fs-5 text-light lh-lg text-center text-md-start pe-md-4"></p>
 
                         <div class="d-flex align-items-start gap-3 pt-1">
                             
                             <a href=""
-                            class="btn btn-cta border border-3 border-highlight rounded-3 fs-5 px-4 py-2 text-center">
+                            class="btn btn-cta border border-3 border-primary rounded-3 fs-5 px-4 py-2 text-center">
                                 <span class="me-1">Let's Work Together</span>
                                 <i class="bi bi-rocket-takeoff me-2"></i>
                             </a>
 
-                            <!-- <a href="content/CV_MiaEmerickSchober_DE.pdf"
-                            class="btn btn-outline-info text-white z-1 px-4 py-2">
-                                <span class="me-1">Download CV</span>
-                                <i class="bi bi-download"></i>
-                            </a> -->
                         </div>
 
                         <div class="d-flex flex-wrap align-items-center gap-3 fs-7 text-secondary mt-auto">
@@ -145,8 +141,8 @@
                         <div class="card-header d-flex align-items-center gap-3 text-white bg-transparent px-3 px-md-4 pt-3 pt-md-4 pb-2">
                             <span class="fs-2 purple-gradient fw-bold lh-1 mb-0">20+</span>
                             <div class="d-flex flex-column gap-1 lh-sm">
-                                <h2 class="h5 fw-semibold mb-0 text-white">Years</h2>
-                                <span class="text-secondary fs-8">Programming Experience</span>
+                                <h2 class="h5 fw-semibold mb-0 text-white">Years of Experience</h2>
+                                <span class="text-secondary fs-8">Building Software</span>
                             </div>
                         </div>
 
@@ -162,31 +158,7 @@
                             </p>
                         </div>
                     </div>
-                </section>
-
-                <!-- Certified -->
-                <section class="col-12 col-md-4 d-flex">
-                    <div class="card w-100 h-100 shadow-sm">
-                        <div class="card-header d-flex align-items-center gap-3 text-white bg-transparent px-3 px-md-4 pt-3 pt-md-4 pb-2">
-                            <i class="bi bi-trophy-fill purple-gradient fs-4"></i>
-                            <div class="d-flex flex-column gap-1 w-100 lh-sm">
-                                <h2 class="h5 fw-semibold mb-0 text-white">Certified Knowledge</h2>
-                                <span class="text-secondary fs-8">Harvard CS50x • 2024</span>
-                            </div>
-                        </div>
-
-                        <div class="card-body px-3 px-md-4 pb-3 pb-md-4 pt-0 d-flex flex-column justify-content-center gap-2">
-                            <h3 class="h6 text-white mb-0 fw-semibold lh-base">
-                                Successfully completed Harvard's CS50x
-                            </h3>
-
-                            <p class="fs-8 mb-0 text-secondary">
-                                A course of study covering algorithms, databases, software engineering, web development, 
-                                and analytical problem-solving through Harvard's introductory computer science curriculum.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                </section>                
 
                 <!-- Business Software -->
                 <section class="col-12 col-md-4 d-flex">
@@ -213,36 +185,26 @@
                     </div>
                 </section>
 
-                <!-- Current Work -->
-                <!-- Hidden -->
-                <section class="col-12 col-md-6 d-none">
-                    <div class="card w-100 h-100">
-
-                        <div class="card-header text-white fs-4 fw-bold bg-transparent">
-                            <i class="bi bi-rocket-takeoff-fill purple-gradient me-2"></i>
-                            <span>What I'm Working On</span>
+                <!-- Certified -->
+                <section class="col-12 col-md-4 d-flex">
+                    <div class="card w-100 h-100 shadow-sm">
+                        <div class="card-header d-flex align-items-center gap-3 text-white bg-transparent px-3 px-md-4 pt-3 pt-md-4 pb-2">
+                            <i class="bi bi-trophy-fill purple-gradient fs-4"></i>
+                            <div class="d-flex flex-column gap-1 w-100 lh-sm">
+                                <h2 class="h5 fw-semibold mb-0 text-white">Technical Expertise</h2>
+                                <span class="text-secondary fs-8">Harvard CS50x • 2024</span>
+                            </div>
                         </div>
 
-                        <div class="card-body d-flex flex-column justify-content-between gap-4">
+                        <div class="card-body px-3 px-md-4 pb-3 pb-md-4 pt-0 d-flex flex-column justify-content-center gap-2">
+                            <h3 class="h6 text-white mb-0 fw-semibold lh-base">
+                                Successfully completed Harvard's CS50x
+                            </h3>
 
-                            <div>
-                                <p class="text-white mb-1">Membership Management</p>
-                                <p id="cp-description" class="fs-8">
-                                    Building a modular platform for Membership Management to automate workflows including Applications, Payments and Document generation.
-                                </p>
-                            </div>
-
-                            <div>
-                                <p class="mb-1">Current Task</p>
-                                <div class="d-flex flex-column gap-2">
-                                    <div class="badge bg-dark-2 rounded-1 fs-8 p-2 px-3 w-100">
-                                        Backend Systems & Automation
-                                    </div>
-                                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-                                        <div class="progress-bar" style="width: 68%"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            <p class="fs-8 mb-0 text-secondary">
+                                A course of study covering algorithms, databases, software engineering, web development, 
+                                and analytical problem-solving through Harvard's introductory computer science curriculum.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -263,119 +225,8 @@
                 </section>
 
                 <!-- Section Cards -->
-                <section class="col-12 col-lg-4 d-flex">
-                    <div class="card w-100 shadow-sm">
 
-                        <div class="card-header bg-transparent px-3 px-md-4 pt-3 pt-md-4 pb-0">
-                            <h2 class="h3 text-white fw-semibold mb-0 d-flex align-items-center gap-2">
-                                <i class="bi bi-code-slash purple-gradient"></i>
-                                <span>Tech Stack</span>
-                            </h2>
-                        </div>
-                        
-                        <div class="card-body px-3 px-md-4 pb-3 pb-md-4 pt-3 d-flex flex-column gap-4">
-
-                            <div class="d-flex flex-column gap-2">
-                                <p class="text-white mb-0 fs-6 fw-semibold lh-base">
-                                    Technology Stack & Core Strengths
-                                </p>
-                                <p class="fs-8 mb-0 text-secondary lh-base">
-                                    For clean architectures and effective automations.<br>
-                                </p>
-                            </div>
-
-                            <div id="exp-tech" class="px-2 px-md-3"></div>
-                            
-                            <div id="my-tools" class="d-flex flex-wrap"></div>
-                            
-                            <a href=""
-                            class="purple-gradient d-inline-flex align-items-center align-self-end mt-auto pe-none opacity-50 z-1"
-                            aria-disabled="true">
-                                <span class="me-1">View More</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-
-                        </div>
-                    </div>
-                </section>
-
-                <section class="col-12 col-lg-4 d-flex">
-                    <div class="card w-100 shadow-sm">
-
-                        <div class="card-header bg-transparent px-3 px-md-4 pt-3 pt-md-4 pb-0">
-
-                            <h2 class="h3 text-white fw-semibold mb-0 d-flex align-items-center gap-2">
-                                <i class="bi bi-check-circle-fill purple-gradient"></i>
-                                <span>Journey</span>
-                            </h2>
-
-                        </div>
-
-                        <div class="card-body px-3 px-md-4 pb-3 pb-md-4 pt-3 d-flex flex-column gap-4">
-
-                            <div class="d-flex flex-column gap-2">
-                                <p class="text-white mb-0 fs-6 fw-semibold lh-base">
-                                    Continuous learning for over two decades
-                                </p>
-                                <p class="fs-8 mb-0 text-secondary lh-base">
-                                    Strongly shaped the way i build software today.
-                                </p>
-                            </div>
-
-                            <div class="px-2 px-md-3 pb-1">
-
-                                <div class="border-start border-primary ps-4 pt-3 position-relative d-flex flex-column gap-4" style="border-left-width: 10px;">
-                                    <div class="timeline-mark">
-                                        <i class="timeline-dot bi bi-circle-fill text-info fs-9 position-absolute start-0"></i>
-                                        <span class="fs-7 text-white">2024 <i class="bi bi-dash"></i> Today</span>
-                                        <div class="ms-4 fs-8 text-secondary lh-base">
-                                            <div class="text-info mt-0">Web Development</div>
-                                            Completed Harvard's CS50x and discovered my passion for modern web development with Django, Bootstrap, and JavaScript.
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="timeline-mark">
-                                        <i class="timeline-dot bi bi-circle-fill text-info fs-9 position-absolute start-0"></i>
-                                        <div class="timeline-label">
-                                            <span class="fs-7 text-white">2019 <i class="bi bi-dash"></i> 2023</span>                                                    
-                                            <div class="ms-4 fs-8 text-secondary lh-base">
-                                                <div class="text-info mt-0">OOP & Game Development</div>
-                                                Learned C#, Python and experimented with Unity and other Game Engines.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-mark">
-                                        <i class="timeline-dot bi bi-circle-fill text-info fs-9 position-absolute start-0"></i>
-                                        <span class="fs-7 text-white">2013 <i class="bi bi-dash"></i> 2018</span>
-                                        <div class="ms-4 fs-8 text-secondary lh-base">                                                    
-                                            <div class="text-info mt-0">Object-Oriented Programming</div>
-                                            Learned Java and OOP while experimenting with 2d graphic and network libraries.
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="timeline-mark">
-                                        <i class="timeline-dot bi bi-circle-fill text-info fs-9 position-absolute start-0"></i>
-                                        <span class="fs-7 text-white">2003 <i class="bi bi-dash"></i> 2012</span>
-                                        <div class="ms-4 fs-8 text-secondary lh-base">
-                                            <div class="text-info mt-0">Programming Basics</div>
-                                            Started programming with PureBasic by building experimental apps, games, and media tools.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a href=""
-                            class="purple-gradient d-inline-flex align-items-center align-self-end mt-auto pe-none opacity-50 z-1"
-                            aria-disabled="true">
-                                <span class="me-1">View More</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-
-                        </div>
-                    </div>
-                </section>
-
+                <!-- Services -->
                 <section class="col-12 col-lg-4 d-flex">
                     <div class="card w-100 shadow-sm">
 
@@ -393,7 +244,7 @@
                                 I ship products that solve real problems
                                 </p>
                                 <p class="fs-8 mb-0 text-secondary lh-base">
-                                    Through intuitive, user-focused interfaces.
+                                    With intuitive, user-focused interfaces.
                                 </p>
                             </div>
 
@@ -437,18 +288,125 @@
                                         <p class="fs-8 text-secondary lh-base mb-0">Interfaces that make complex features simple to understand and easy to use on any device.</p>
                                     </div>
                                 </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tech Stack -->
+                <section class="col-12 col-lg-4 d-flex">
+                    <div class="card w-100 shadow-sm">
+
+                        <div class="card-header bg-transparent px-3 px-md-4 pt-3 pt-md-4 pb-0">
+                            <h2 class="h3 text-white fw-semibold mb-0 d-flex align-items-center gap-2">
+                                <i class="bi bi-code-slash purple-gradient"></i>
+                                <span>Tech Stack</span>
+                            </h2>
+                        </div>
+                        
+                        <div class="card-body px-3 px-md-4 pb-3 pb-md-4 pt-3 d-flex flex-column gap-4">
+
+                            <div class="d-flex flex-column gap-2">
+                                <p class="text-white mb-0 fs-6 fw-semibold lh-base">
+                                    Technology Stack & Core Strengths
+                                </p>
+                                <p class="fs-8 mb-0 text-secondary lh-base">
+                                    For clean architectures and effective automations.<br>
+                                </p>
                             </div>
 
-                            <a href=""
+                            <div id="exp-tech" class="px-2 px-md-3"></div>
+                            
+                            <div id="my-tools" class="d-flex flex-wrap justify-content-center"></div>
+                            
+                            <!-- <a href=""
                             class="purple-gradient d-inline-flex align-items-center align-self-end mt-auto pe-none opacity-50 z-1"
                             aria-disabled="true">
                                 <span class="me-1">View More</span>
                                 <i class="bi bi-arrow-right"></i>
-                            </a>
-                            
+                            </a> -->
+
                         </div>
                     </div>
                 </section>
+
+                <section class="col-12 col-lg-4 d-flex">
+                    <div class="card w-100 shadow-sm">
+
+                        <div class="card-header bg-transparent px-3 px-md-4 pt-3 pt-md-4 pb-0">
+
+                            <h2 class="h3 text-white fw-semibold mb-0 d-flex align-items-center gap-2">
+                                <i class="bi bi-map-fill purple-gradient"></i>
+                                <span>Journey</span>
+                            </h2>
+
+                        </div>
+
+                        <div class="card-body px-3 px-md-4 pb-3 pb-md-4 pt-3 d-flex flex-column gap-4">
+
+                            <div class="d-flex flex-column gap-2">
+                                <p class="text-white mb-0 fs-6 fw-semibold lh-base">
+                                    Continuous learning for over two decades
+                                </p>
+                                <p class="fs-8 mb-0 text-secondary lh-base">
+                                    Strongly shaped the way i build software today.
+                                </p>
+                            </div>
+
+                            <div class="px-2 px-md-3 pb-1">
+
+                                <div class="border-start border-primary ps-4 pt-3 position-relative d-flex flex-column gap-4" style="border-left-width: 10px;">
+                                    <div class="timeline-mark">
+                                        <i class="timeline-dot bi bi-circle-fill purple-gradient fs-9 position-absolute start-0"></i>
+                                        <span class="fs-7 text-white">2024 <i class="bi bi-dash"></i> Today</span>
+                                        <div class="ms-4 fs-8 text-secondary lh-base">
+                                            <div class="text-info mt-0">Web Development</div>
+                                            Completed Harvard's CS50x and discovered my passion for modern web development with Django, Bootstrap, and JavaScript.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-mark">
+                                        <i class="timeline-dot bi bi-circle-fill purple-gradient fs-9 position-absolute start-0"></i>
+                                        <div class="timeline-label">
+                                            <span class="fs-7 text-white">2019 <i class="bi bi-dash"></i> 2023</span>                                                    
+                                            <div class="ms-4 fs-8 text-secondary lh-base">
+                                                <div class="text-info mt-0">OOP & Game Development</div>
+                                                Learned C#, Python and experimented with Unity and other Game Engines.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-mark">
+                                        <i class="timeline-dot bi bi-circle-fill purple-gradient fs-9 position-absolute start-0"></i>
+                                        <span class="fs-7 text-white">2013 <i class="bi bi-dash"></i> 2018</span>
+                                        <div class="ms-4 fs-8 text-secondary lh-base">                                                    
+                                            <div class="text-info mt-0">Object-Oriented Programming</div>
+                                            Learned Java and OOP while experimenting with 2d graphic and network libraries.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-mark">
+                                        <i class="timeline-dot bi bi-circle-fill purple-gradient fs-9 position-absolute start-0"></i>
+                                        <span class="fs-7 text-white">2003 <i class="bi bi-dash"></i> 2012</span>
+                                        <div class="ms-4 fs-8 text-secondary lh-base">
+                                            <div class="text-info mt-0">Programming Basics</div>
+                                            Started programming with PureBasic by building experimental apps, games, and media tools.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <a href=""
+                            class="purple-gradient d-inline-flex align-items-center align-self-end mt-auto pe-none opacity-50 z-1"
+                            aria-disabled="true">
+                                <span class="me-1">View More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a> -->
+
+                        </div>
+                    </div>
+                </section>                
 
                 <!-- Contact -->
                 <section class="col-12 col-lg-8 d-none d-lg-flex">
@@ -500,46 +458,49 @@
             </div>
             <!-- Contend End-->
             
-            
-            <!-- Footer-->
-            <div class="col-12 d-flex flex-column justify-content-start mt-2 mt-md-3 gap-3">
+            <div class="row">
+                <!-- Footer-->
+                <div class="col-12 d-flex flex-column justify-content-start mt-3 gap-3">
 
-                <!-- CTA -->
-                <div class="bg-highlight-gradient bg-opacity-25 footer-cta border border-2 border-highlight rounded-3 px-4 py-3 d-flex flex-column flex-md-row align-items-center gap-3 gap-md-4">
+                    <!-- CTA -->
+                    <div class="bg-highlight-gradient bg-opacity-25 footer-cta border border-2 border-highlight rounded-3 px-4 py-3 d-flex flex-row align-items-center gap-3 gap-md-4">
 
-                    <i class="bi bi-rocket-takeoff purple-gradient display-4"></i>
+                        <i class="bi bi-rocket-takeoff purple-gradient display-1"></i>
 
-                    <div class="flex-grow-1 d-flex flex-column gap-2 me-md-auto text-center text-md-start">
-                        <div class="text-white fs-5 fw-semibold">Have a Project in Mind?</div>
-                        <div class="text-light">I'd love to help bring your ideas to life.</div>
+                        <div class="d-flex flex-column flex-md-row text-center w-100 gap-2 px-5">
+                            <div class="flex-grow-1 d-flex flex-column gap-1 me-md-auto text-md-start">
+                                <div class="text-white fs-5 fw-semibold">Have a Project in Mind?</div>
+                                <div class="text-light">I'd love to help bring your ideas to life.</div>
+                            </div>
+
+                            <!-- Button right -->
+                            <a href="mailto:mia.sophie.dev@gmail.com"
+                            class="btn btn-cta border border-3 border-primary rounded-3 text-white fs-5 px-4 py-2 text-center d-inline-flex align-items-center justify-content-center gap-2">
+                                <span class="lh-1">Let's Work Together</span>
+                                <i class="bi bi-arrow-right lh-1"></i>
+                            </a>
+                        </div>
+
                     </div>
 
-                    <!-- Button right -->
-                    <a href="mailto:mia.sophie.dev@gmail.com"
-                    class="btn btn-cta border border-3 border-highlight rounded-3 text-white fs-5 px-4 py-2 text-center">
-                        <span class="me-1">Let's Work Together</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
+                    <!-- Bottom Footer -->
+                    <div class="pt-3 pt-md-4 border-top border-dark-2 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 gap-md-3 text-center text-md-start small text-secondary">
 
+                        <div>
+                            <i class="bi bi-c-circle"></i>
+                            <span>2026 by Mia Sophie Emerick Schober. All rights reserved.</span>
+                        </div>
+
+                        <div>
+                            <span>Designed with</span>
+                            <i class="bi bi-heart-fill purple-gradient ms-1"></i>
+                            <span>and lots of </span>
+                            <i class="bi bi-cup-hot-fill text-white ms-1"></i>
+                        </div>
+
+                    </div>
+                    <!-- Footer End-->
                 </div>
-
-                <!-- Bottom Footer -->
-                <div class="pt-3 pt-md-4 border-top border-dark-2 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 gap-md-3 text-center text-md-start small text-secondary">
-
-                    <div>
-                        <i class="bi bi-c-circle"></i>
-                        <span>2026 by Mia Sophie Emerick Schober. All rights reserved.</span>
-                    </div>
-
-                    <div>
-                        <span>Designed with</span>
-                        <i class="bi bi-heart-fill purple-gradient ms-1"></i>
-                        <span>and lots of </span>
-                        <i class="bi bi-cup-hot-fill text-white ms-1"></i>
-                    </div>
-
-                </div>
-                <!-- Footer End-->
             </div>
         </div>
     </body>
