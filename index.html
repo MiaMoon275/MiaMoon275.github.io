@@ -8,8 +8,8 @@
         <meta property="og:url" content="https://miamoon275.github.io/" />
         <meta property="og:type" content="website" />
         <title>Mia | Software Developer</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="src/css/bootstrap-icons.min.css">
+        <script src="src/js/bootstrap.bundle.min.js"></script>
         
         <link rel="stylesheet" href="css/custom.css">
         <link rel="stylesheet" type="text/css" href="src/css/styles.css">
@@ -24,9 +24,9 @@
         <script type="module" src="src/js/main.js"></script>
 
     </head>
-    <body>
-        <div class="container-fluid container-md py-3 py-md-4">
-            <div class="row g-4 align-items-stretch">               
+    <body class="nebula-effect">
+        <div class="container-fluid container-md py-3 py-md-4 project-shell">
+            <div class="row g-4 align-items-stretch">
 
                 <!-- Content Start-->                
                 <section class="col-12 w-100 bg-hero position-relative">
@@ -486,25 +486,54 @@
 
                     </div>
 
-                    <!-- Bottom Footer -->
-                    <div class="pt-3 pt-md-4 border-top border-dark-2
-                        d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 gap-md-3
-                        text-center text-md-start small text-secondary">
+                   
+                    <footer class="bg-dark text-light mt-5 py-4 border-top border-primary">
 
-                        <div>
-                            <i class="bi bi-c-circle"></i>
-                            <span>2026 by Mia Sophie Emerick Schober. All rights reserved.</span>
+                        <!-- Footer Row -->
+                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start px-4">
+
+                            <!-- Brand -->
+                            <div class=" text-md-start mb-3 mb-md-0">
+                                <div class="fw-bold">Mia Sophie Emerick Schober</div>
+                                <small class="text-secondary">
+                                    Software Developer Portfolio
+                                </small>
+                            </div>
+
+                            <!-- Links -->
+                            <div class="col-md-6 text-end mb-3 mb-md-0">
+                                <div class="d-flex flex-row flex-md-column gap-3 align-items-between">
+                                    <a href="/impressum.html" class="text-decoration-none text-light">
+                                        Imprint
+                                    </a>
+
+                                    <!-- <a href="/datenschutz.html" class="text-decoration-none text-light">
+                                    Datenschutz
+                                    </a>
+
+                                    <a href="/contact.html" class="text-decoration-none text-light">
+                                    Kontakt
+                                    </a> -->
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="d-flex flex-column text-secondary flex-md-row justify-content-between mt-0 px-4 px-md-4 mt-5">
+                            <div class="text-center text-md-start">
+                                <i class="bi bi-c-circle"></i>
+                                <span>2026 by Mia Sophie Emerick Schober. All rights reserved.</span>
+                            </div>
+
+                            <div class="text-center text-md-none">
+                                <span>Designed with</span>
+                                <i class="bi bi-heart-fill purple-gradient ms-1"></i>
+                                <span>and lots of </span>
+                                <i class="bi bi-cup-hot-fill text-white ms-1"></i>
+                            </div>
                         </div>
 
-                        <div>
-                            <span>Designed with</span>
-                            <i class="bi bi-heart-fill purple-gradient ms-1"></i>
-                            <span>and lots of </span>
-                            <i class="bi bi-cup-hot-fill text-white ms-1"></i>
-                        </div>
+                    </footer>
 
-                    </div>
-                    <!-- Footer End-->
                 </div>
             </div>
         </div>
