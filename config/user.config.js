@@ -13,8 +13,8 @@ export const TEXT_CONTENT = {
     // "Element Id": "Text Content"
     // "ct-hero": "Focused on workflow automation,<br>internal tools, and reliable business software."
     "ct-hero": `I build <span class='complementary-gradient fs-5'>workflow automation systems</span> and
-                <br class="d-none d-md-block"> <span class='complementary-gradient fs-5'>business software</span> that save time, reduce
-                <br class="d-none d-md-block"> manual work, and help teams focus on what matters.`
+                <br class="d-none d-md-block"> <span class='complementary-gradient fs-5'>business software</span>, focusing on scalable APIs, clean
+                <br class="d-none d-md-block"> data models, and end-to-end delivery <span class='complementary-gradient fs-5'>from design to deployment</span>`
 }
 
 export const MY_TOOLS = {
