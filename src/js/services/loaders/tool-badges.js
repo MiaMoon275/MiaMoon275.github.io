@@ -1,14 +1,7 @@
 import { MY_TOOLS } from "../../../../config/user.config.js";
 
-export function loadTools(useCache) {
+export function loadTools() {
     const container = document.getElementById("my-tools");
-    const cached = localStorage.getItem("tool-badges");
-
-    if (cached && useCache) {
-        container.innerHTML = cached;
-        console.log("Loaded Tool-Badges from cache")
-        return;
-    }
 
     let html = "";
 
@@ -33,6 +26,4 @@ export function loadTools(useCache) {
     });
 
     container.innerHTML = html;
-    console.log("Fetched Tool-Badges")
-    localStorage.setItem("tool-badges", html);
 }
