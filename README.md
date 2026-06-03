@@ -32,7 +32,7 @@ It focuses on:
 - **HTML5**
 - **CSS3 / Bootstrap**
 - **JavaScript (ES6+)**
-- **LocalStorage caching system**
+- **LocalStorage caching system (currently disabled / not required)**
 - **Custom UI components**
 - **Responsive design principles**
 
@@ -45,7 +45,7 @@ It focuses on:
 - Fully responsive design (mobile-first approach)
 - Modular JS architecture (loader-services, configuration)
 - Dynamic project and skill rendering
-- LocalStorage-based performance optimization
+- LocalStorage-based performance optimization (currently disabled / not required)
 
 ---
 

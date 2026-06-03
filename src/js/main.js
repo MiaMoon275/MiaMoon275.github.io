@@ -10,16 +10,16 @@ const MILLISECONDS_PER_HOUR = 60 * 60 * 1000;
 const CACHE_LIFETIME = 24 * MILLISECONDS_PER_HOUR
 
 function loadAll() {
-    const cacheExpiration = Number(localStorage.getItem("next_fetch"));
-    const useCache = cacheExpiration && Date.now() < cacheExpiration;
+    // const cacheExpiration = Number(localStorage.getItem("next_fetch")); Disabled: Not needed yet.
+    // const useCache = cacheExpiration && Date.now() < cacheExpiration;
     const screenMdUp = window.innerWidth >= 768;
     
-    loadTools(useCache);
+    loadTools();
     loadTextContent();
     loadCertificates();
-    loadProjects(screenMdUp);
+    loadProjects();
     loadExperience();
-    localStorage.setItem("next_fetch", Date.now() + CACHE_LIFETIME);
+    // localStorage.setItem("next_fetch", Date.now() + CACHE_LIFETIME);
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {

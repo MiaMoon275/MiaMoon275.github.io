@@ -87,7 +87,7 @@ class ProjectCard {
     }
 }
 
-export function loadProjects(screenMdUp) {
+export function loadProjects() {
     const container = document.getElementById("projects");
     container.innerHTML = ""
 
