@@ -1,0 +1,262 @@
+body.legal-page {
+    min-height: 100vh;
+    padding: 0;
+    color: var(--portfolio-ink);
+    background-color: #050412;
+    background-image:
+        linear-gradient(180deg, rgba(5, 4, 18, 0.15), #050412 38rem),
+        url("../../content/background.png");
+    background-repeat: no-repeat, repeat;
+}
+
+.legal-page .project-shell {
+    max-width: 72rem;
+    padding-top: 7rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.legal-page .project-shell > .row {
+    --bs-gutter-y: 2rem;
+}
+
+.legal-page .project-shell > .row > .col-12:first-child {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+    display: flex;
+    width: 100%;
+    min-height: 4.75rem;
+    margin-top: 0 !important;
+    align-items: center;
+    padding-inline: max(1rem, calc((100vw - 69rem) / 2));
+    background: rgba(5, 4, 18, 0.86);
+    border-bottom: 1px solid var(--portfolio-border);
+    backdrop-filter: blur(18px);
+}
+
+.legal-page .project-shell > .row > .col-12:first-child::before {
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 0.75rem;
+    place-items: center;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    content: "M";
+    background: linear-gradient(145deg, var(--portfolio-violet), #b53ad1);
+    border-radius: 7px;
+    box-shadow: 0 0 24px rgba(118, 87, 255, 0.38);
+}
+
+.legal-page .project-shell > .row > .col-12:first-child::after {
+    margin-right: auto;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    content: "Mia E.S.";
+}
+
+.legal-page .project-shell > .row > .col-12:first-child .btn {
+    order: 3;
+    width: auto !important;
+    padding: 0.55rem 0.9rem;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.legal-page .project-shell > .row > .col-12:first-child .btn:hover {
+    color: #080615;
+    background: var(--portfolio-lime);
+    border-color: var(--portfolio-lime);
+}
+
+.legal-page .card {
+    overflow: visible;
+    background: rgba(12, 12, 31, 0.88) !important;
+    border: 1px solid var(--portfolio-border) !important;
+    border-radius: 8px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2) !important;
+}
+
+.legal-page .card-body {
+    padding: clamp(1.5rem, 5vw, 4rem) !important;
+    color: var(--portfolio-muted) !important;
+}
+
+.legal-page .card-body > .d-flex:first-child {
+    align-items: center;
+    margin: calc(clamp(1.5rem, 5vw, 4rem) * -1) calc(clamp(1.5rem, 5vw, 4rem) * -1) 2.75rem;
+    padding: 1rem clamp(1.5rem, 5vw, 4rem);
+    background: rgba(12, 12, 31, 0.96);
+    border-bottom: 1px solid var(--portfolio-border);
+    backdrop-filter: blur(14px);
+}
+
+.legal-page .card-body > .d-flex:first-child > div {
+    margin-bottom: 0 !important;
+    color: var(--portfolio-lilac) !important;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.76rem !important;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.legal-page .card-body > .d-flex:first-child a {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.legal-page .card-body > .d-flex:first-child a:hover,
+.legal-page .card-body a:hover {
+    color: var(--portfolio-lime);
+}
+
+.legal-page h1,
+.legal-page h2,
+.legal-page h3,
+.legal-page h4 {
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 0;
+}
+
+.legal-page h1 {
+    margin-bottom: 2rem;
+    font-size: clamp(2.25rem, 6vw, 4.25rem);
+    line-height: 1;
+}
+
+.legal-page h2 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.25rem;
+    padding-top: 1.25rem;
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    border-top: 1px solid var(--portfolio-border);
+}
+
+.legal-page h3 {
+    margin-top: 2.25rem;
+    margin-bottom: 0.85rem;
+    color: var(--portfolio-lilac);
+    font-size: 1.2rem;
+}
+
+.legal-page h4 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.65rem;
+    font-size: 1rem;
+}
+
+.legal-page p,
+.legal-page li {
+    line-height: 1.85;
+}
+
+.legal-page p {
+    margin-bottom: 1.25rem;
+}
+
+.legal-page ul {
+    padding-left: 1.25rem;
+}
+
+.legal-page li + li {
+    margin-top: 0.65rem;
+}
+
+.legal-page strong {
+    color: #eee9f8;
+}
+
+.legal-page section:first-of-type h1:first-of-type,
+.legal-page .card-body > h1:first-of-type {
+    position: relative;
+}
+
+.legal-page section:first-of-type h1:first-of-type::after,
+.legal-page .card-body > h1:first-of-type::after {
+    display: block;
+    width: 5rem;
+    height: 3px;
+    margin-top: 1.25rem;
+    content: "";
+    background: linear-gradient(90deg, var(--portfolio-violet), var(--portfolio-lime));
+    border-radius: 99px;
+}
+
+.legal-page footer {
+    margin-top: 4rem !important;
+    color: var(--portfolio-muted) !important;
+    border-color: var(--portfolio-border) !important;
+}
+
+.legal-page footer a {
+    color: var(--portfolio-muted);
+}
+
+.legal-page footer a:hover {
+    color: var(--portfolio-lime);
+}
+
+.legal-page .legal-footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.legal-page .legal-footer-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.legal-page .legal-footer-label {
+    color: var(--portfolio-lilac);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.legal-page .legal-footer-group a {
+    color: #fff !important;
+}
+
+@media (max-width: 767.98px) {
+    .legal-page .project-shell {
+        padding-top: 6rem !important;
+    }
+
+    .legal-page .project-shell > .row {
+        --bs-gutter-x: 0;
+    }
+
+    .legal-page .project-shell > .row > .col-12:first-child::after {
+        display: none;
+    }
+
+    .legal-page h2 {
+        margin-top: 2.75rem;
+    }
+
+    .legal-page footer {
+        padding-inline: 0.5rem;
+    }
+
+    .legal-page .legal-footer-links {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
