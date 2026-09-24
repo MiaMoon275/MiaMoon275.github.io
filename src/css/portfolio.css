@@ -290,6 +290,86 @@ body.portfolio-page {
 
 .site-footer {
     color: var(--portfolio-muted);
+    background: rgba(5, 4, 18, 0.72);
+    border-top: 1px solid var(--portfolio-border);
+}
+
+.portfolio-footer {
+    margin-top: 0;
+}
+
+.portfolio-footer-brand {
+    max-width: 21rem;
+}
+
+.portfolio-footer-title {
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.portfolio-footer-copy {
+    color: var(--portfolio-muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.portfolio-footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem 2.5rem;
+}
+
+.portfolio-footer-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+}
+
+.portfolio-footer-label {
+    color: var(--portfolio-lilac);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.portfolio-footer-group a {
+    color: #fff;
+    font-size: 0.88rem;
+}
+
+.portfolio-footer-group a:hover {
+    color: var(--portfolio-lime);
+}
+
+.portfolio-footer-social {
+    display: flex;
+    justify-content: flex-lg-end;
+    gap: 0.55rem;
+}
+
+.portfolio-footer-social a {
+    display: inline-grid;
+    width: 2.65rem;
+    height: 2.65rem;
+    place-items: center;
+    color: #fff;
+    border: 1px solid var(--portfolio-border);
+    border-radius: 6px;
+}
+
+.portfolio-footer-social a:hover {
+    color: var(--portfolio-lime);
+    border-color: var(--portfolio-lime);
+}
+
+.portfolio-footer-bottom {
+    color: var(--portfolio-muted);
+    font-size: 0.8rem;
     border-top: 1px solid var(--portfolio-border);
 }
 
@@ -487,6 +567,10 @@ body.portfolio-page {
 
     .case-study-page .row.g-5 {
         --bs-gutter-x: 0;
+    }
+
+    .portfolio-footer-links {
+        grid-template-columns: 1fr;
     }
 }
 
