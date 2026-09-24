@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 20vw;
     grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
+    grid-template-areas:
         "header sidebar"
         "content sidebar"
         "footer footer";
@@ -47,7 +47,7 @@
 @media (max-width: 768px) {
     .layout {
         grid-template-columns: 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "header"
             "content"
             "sidebar"
