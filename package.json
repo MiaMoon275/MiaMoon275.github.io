@@ -1,5 +1,5 @@
 {
-  "name": "miamoon275.github.io",
+  "name": "mia-sophie.dev",
   "version": "1.0.0",
   "description": "Welcome to my personal portfolio website 👋   This project showcases my understanding, work, and passion for modern web development.",
   "main": "index.js",
@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MiaMoon275/MiaMoon275.github.io.git"
+    "url": "git+https://github.com/MiaMoon275/mia-sophie.dev.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/MiaMoon275/MiaMoon275.github.io/issues"
+    "url": "https://github.com/MiaMoon275/mia-sophie.dev/issues"
   },
-  "homepage": "https://github.com/MiaMoon275/MiaMoon275.github.io#readme",
+  "homepage": "https://github.com/MiaMoon275/mia-sophie.dev#readme",
   "dependencies": {
     "bootstrap": "^5.3.8",
     "sass": "^1.100.0"

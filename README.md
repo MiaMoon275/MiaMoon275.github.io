@@ -10,7 +10,7 @@ I will update this project regulary.
 
 ## 🌐 Live Demo
 
-🔗 [View Portfolio](https://miamoon275.github.io)
+🔗 [View Portfolio](https://mia-sophie.dev)
 
 ---
 
@@ -52,7 +52,7 @@ It focuses on:
 ## 📦 Project Structure
 
 ```txt
-MiaMoon275.github.io/
+mia-sophie.dev/
 │
 ├── config/
 │   ├── projects.config.js
