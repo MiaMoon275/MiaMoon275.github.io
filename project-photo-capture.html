@@ -2,11 +2,19 @@
 <html lang="en">
 
 <head>
+    <meta property="og:title" content="Membership Photo Capture | Mia Emerick Schober" />
+    <meta property="og:description"
+        content="Case study: a photo capture workflow that helped produce 5,600 membership cards under a fixed seasonal deadline." />
+    <meta property="og:url" content="https://miamoon275.github.io/project-photo-capture.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://miamoon275.github.io/content/projects/photo_software.png" />
+    <meta property="og:image:alt" content="Membership photo capture workflow" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Case study: a photo capture workflow that helped produce 5,600 membership cards under a fixed seasonal deadline.">
     <meta name="theme-color" content="#050412">
+
     <title>Membership Photo Capture | Mia E.S.</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -46,10 +54,11 @@
         <section class="case-meta">
             <div class="container">
                 <div class="row">
-                    <div class="col-6 col-lg-3 case-meta-item"><span class="case-meta-label">Client</span><strong>Large
-                            Berlin sports club</strong></div>
+                    <div class="col-6 col-lg-3 case-meta-item"><span
+                            class="case-meta-label">Client</span><strong>Schwimm-Gemeinschaft Neukölln e.V.</strong>
+                    </div>
                     <div class="col-6 col-lg-3 case-meta-item"><span class="case-meta-label">My
-                            role</span><strong>Solution designer and developer</strong></div>
+                            role</span><strong>Independent product developer</strong></div>
                     <div class="col-6 col-lg-3 case-meta-item"><span class="case-meta-label">Scale</span><strong>5,600
                             membership cards</strong></div>
                     <div class="col-6 col-lg-3 case-meta-item"><span
@@ -64,22 +73,47 @@
                         <div class="case-content">
                             <div class="eyebrow mb-2">The challenge</div>
                             <h2>A large production task with little room for mix-ups.</h2>
-                            <p>The club needed current photos for thousands of membership cards within a short seasonal
-                                window. Capturing images was only one part of the challenge: every file also had to be
-                                matched to the correct person, checked, and made available for the next production step.
+                            <p>
+                                Since the Club installed a new turnstile system, it became necessary to update the
+                                membership cards with current photos to ensure smooth access for all members. The manual
+                                process was too slow: receive pictures by thousands of members, edit them manually and
+                                match
+                                them to the correct membership records. With that, the club faced a significant
+                                bottleneck in
+                                updating membership until the seasonal opening.
                             </p>
-                            <p>A manual naming and sorting process would have been slow and vulnerable to errors. The
-                                team needed a workflow that remained easy to operate even when many people were waiting.
+                            <p>The club asked me to design a system to increase speed of this process. Photos needed to
+                                be
+                                captured in a standardized format, correctly associated with the right membership
+                                records, and prepared
+                                for the next production step without errors. The Club prepared a dedicated capture
+                                station to facilitate this process.
                             </p>
                             <div class="eyebrow mt-5 mb-2">My contribution</div>
                             <h2>I designed the process around the people at the capture station.</h2>
-                            <p>I built a focused application that guides staff through member selection, photo capture,
-                                and confirmation. The system handles association and file preparation in the background,
-                                reducing the number of decisions and manual actions required for each person.</p>
-                            <p>Because the deadline was fixed, I prioritized the essential journey, tested it against
-                                real working conditions, and made the status of each step immediately visible.</p>
+                            <p>I built a focused application with minimal features. A clear button for photo capture
+                                initiates the pricess.
+                                Once the photo is taken, the employee could enter either the membership number or the
+                                members name, a dynamic
+                                table would suggest members while typing, allowing for quick and accurate selection.
+                                After confirmation,
+                                the system automatically associates the photo with the correct membership record.
+                            </p>
+
+                            <div class="eyebrow mt-5 mb-2">Additional Storaging System</div>
+                            <h2>Support for capturing photos without immediate server access</h2>
+                            <p>An additional storaging system allowed the club to capture pictures at places without
+                                access to the SQL Server.
+                                This system temporarily stored the captured photos locally and synchronized them with
+                                the central SQL Server
+                                once a connection was available. This was especially useful to capture photos during
+                                training
+                                sessions or external events, saving the members from having to go to the main office
+                                unnecessarily.
+                            </p>
+
                             <div class="eyebrow mt-5 mb-2">The outcome</div>
-                            <h2>A repeatable flow that supported the full card run.</h2>
+                            <h2>A repeatable flow that supported the full capturing run.</h2>
                             <p>The solution enabled the organization to process the required photos and prepare 5,600
                                 membership cards. Staff could concentrate on the people in front of them instead of file
                                 names and folders, while consistent handling reduced follow-up work.</p>
@@ -115,6 +149,7 @@
                                 <span class="tech-tag">SQL</span>
                                 <span class="tech-tag">Camera integration</span>
                                 <span class="tech-tag">Data assignment</span>
+                                <span class="tech-tag">Local storage</span>
                             </div>
                         </div>
                     </aside>
@@ -129,11 +164,36 @@
         </nav>
     </main>
     <footer class="site-footer portfolio-footer">
-        <div class="container py-5"><div class="row g-4 align-items-start">
-            <div class="col-12 col-lg-4 portfolio-footer-brand"><div class="portfolio-footer-title mb-2">Mia Sophie Emerick Schober</div><div class="portfolio-footer-copy">Python &amp; Django Developer creating dependable software for real workflows.</div></div>
-            <div class="col-12 col-md-6 col-lg-5"><div class="portfolio-footer-links"><div class="portfolio-footer-group"><span class="portfolio-footer-label">Deutsch</span><a href="impressum/index.html#german">Impressum</a><a href="datenschutz.html#german">Datenschutzerklärung</a></div><div class="portfolio-footer-group"><span class="portfolio-footer-label">English</span><a href="impressum/index.html#english">Legal Notice</a><a href="datenschutz.html#english">Privacy Policy</a></div></div></div>
-            <div class="col-12 col-md-6 col-lg-3"><div class="portfolio-footer-social"><a href="https://github.com/MiaMoon275/" aria-label="GitHub"><i class="bi bi-github"></i></a><a href="https://www.linkedin.com/in/mia-sophie-emerick-schober-23352a197/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="mailto:mia.sophie.dev@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a></div></div>
-        </div><div class="portfolio-footer-bottom mt-4 pt-4 d-flex flex-column flex-sm-row justify-content-between gap-2"><span>&copy; 2026 Mia Sophie Emerick Schober</span><span>Designed and developed by Mia E.S.</span></div></div>
+        <div class="container py-5">
+            <div class="row g-4 align-items-start">
+                <div class="col-12 col-lg-4 portfolio-footer-brand">
+                    <div class="portfolio-footer-title mb-2">Mia Sophie Emerick Schober</div>
+                    <div class="portfolio-footer-copy">Python &amp; Django Developer creating dependable software for
+                        real workflows.</div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="portfolio-footer-links">
+                        <div class="portfolio-footer-group"><span class="portfolio-footer-label">Deutsch</span><a
+                                href="impressum/index.html#german">Impressum</a><a
+                                href="datenschutz.html#german">Datenschutzerklärung</a></div>
+                        <div class="portfolio-footer-group"><span class="portfolio-footer-label">English</span><a
+                                href="impressum/index.html#english">Legal Notice</a><a
+                                href="datenschutz.html#english">Privacy Policy</a></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="portfolio-footer-social"><a href="https://github.com/MiaMoon275/" aria-label="GitHub"><i
+                                class="bi bi-github"></i></a><a
+                            href="https://www.linkedin.com/in/mia-sophie-emerick-schober-23352a197/"
+                            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a
+                            href="mailto:mia.sophie.dev@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-footer-bottom mt-4 pt-4 d-flex flex-column flex-sm-row justify-content-between gap-2">
+                <span>&copy; 2026 Mia Sophie Emerick Schober</span><span>Designed and developed by Mia E.S.</span>
+            </div>
+        </div>
     </footer>
 </body>
 

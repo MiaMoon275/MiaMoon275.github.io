@@ -2,11 +2,19 @@
 <html lang="en">
 
 <head>
+    <meta property="og:title" content="Secure Maintenance System | Mia Emerick Schober" />
+    <meta property="og:description"
+        content="Case study: a secure maintenance workflow that keeps distributed client installations current and recoverable." />
+    <meta property="og:url" content="https://miamoon275.github.io/project-secure-sync.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://miamoon275.github.io/content/projects/file_synchronisation.png" />
+    <meta property="og:image:alt" content="Secure maintenance and file synchronization interface" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Case study: a secure maintenance workflow that keeps distributed client installations current and recoverable.">
     <meta name="theme-color" content="#050412">
+
     <title>Secure Maintenance System | Mia E.S.</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -50,10 +58,10 @@
                             class="case-meta-label">Context</span><strong>Maintained client installations</strong></div>
                     <div class="col-6 col-lg-3 case-meta-item"><span class="case-meta-label">My
                             role</span><strong>Product owner and developer</strong></div>
-                    <div class="col-6 col-lg-3 case-meta-item"><span class="case-meta-label">Goal</span><strong>Safer
+                    <div class="col-6 col-lg-3 case-meta-item"><span class="case-meta-label">Goal</span><strong>Safe
                             remote updates</strong></div>
                     <div class="col-6 col-lg-3 case-meta-item"><span
-                            class="case-meta-label">Focus</span><strong>Continuity and recovery</strong></div>
+                            class="case-meta-label">Focus</span><strong>Stability and recovery</strong></div>
                 </div>
             </div>
         </section>
@@ -66,18 +74,27 @@
                             <h2>Good software also needs a dependable life after launch.</h2>
                             <p>Client applications change over time: improvements need to be delivered, problems
                                 investigated, and important information protected. Asking clients to move files manually
-                                or guide every maintenance step creates interruptions and increases the chance of
-                                mistakes.</p>
-                            <p>I needed a repeatable way to support installations remotely while retaining a clear
-                                record of changes and a safe path back if an update did not behave as expected.</p>
+                                or guide every maintenance step creates interruptions and risks errors to become
+                                problems,
+                                before they have even been discovered.</p>
+                            <p>I needed a repeatable way to observe the performance of client installations in real time
+                                and ensure
+                                that updates could be applied fast and safely, without requiring constant client
+                                intervention.</p>
                             <div class="eyebrow mt-5 mb-2">My contribution</div>
-                            <h2>I turned maintenance into a controlled, traceable process.</h2>
-                            <p>I created a tool that compares the intended version with the client installation,
-                                transfers only what is needed, verifies that files arrive correctly, and preserves
-                                important data before changes are applied.</p>
-                            <p>Clear records make support easier, while built-in safeguards reduce the need for the
-                                client to participate in routine technical work. The process remains deliberate rather
-                                than fully automatic, so unusual situations can still be reviewed.</p>
+                            <h2>Manual maintenance became a remote monitoring process.</h2>
+                            <p>I created a tool that syncronises logging files to my secured web storage, which
+                                allows me to monitor client installations remotely and create patches, if necessary.
+                                Updates can then be applied remotely, without requiring the client to perform manual
+                                steps.
+                            </p>
+                            <div class="eyebrow mt-5 mb-2">Backup and recovery</div>
+                            <h2>The safety net for client data.</h2>
+                            <p>When a product receives an update, the client's data is first backed up to a local
+                                location on the
+                                client's machine before any changes are applied. This ensures that data can be restored
+                                if an update fails or causes issues.
+                            </p>
                             <div class="eyebrow mt-5 mb-2">The value</div>
                             <h2>Less disruption for clients and better long-term ownership.</h2>
                             <p>Routine maintenance can be handled more consistently, with fewer manual hand-offs and
@@ -106,14 +123,14 @@
                             <div class="outcome-item d-flex gap-3"><span class="outcome-icon"><i
                                         class="bi bi-headset"></i></span>
                                 <div><strong class="text-white d-block mb-1">Client-friendly support</strong><span
-                                        class="small text-secondary">Reducing disruption during routine
-                                        maintenance.</span></div>
+                                        class="small text-secondary">Enabling maintenance without requiring client
+                                        intervention.</span></div>
                             </div>
                             <div class="mt-4 d-flex flex-wrap gap-2">
-                                <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Secure transfer</span>
                                 <span class="tech-tag">File syncing</span>
                                 <span class="tech-tag">Encryption</span>
+                                <span class="tech-tag">Recovery</span>
                                 <span class="tech-tag">Product maintenance</span>
                             </div>
                         </div>
@@ -124,15 +141,40 @@
         <nav class="case-navigation py-5" aria-label="Project navigation">
             <div class="container d-flex flex-column flex-md-row justify-content-between gap-4"><a
                     href="project-embroidery.html"><i class="bi bi-arrow-left me-2"></i>Embroidery Interface</a><a
-                    href="project.html">Next: Portfolio <i class="bi bi-arrow-right ms-2"></i></a></div>
+                    href="project-developer-portfolio.html">Next: Portfolio <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
         </nav>
     </main>
     <footer class="site-footer portfolio-footer">
-        <div class="container py-5"><div class="row g-4 align-items-start">
-            <div class="col-12 col-lg-4 portfolio-footer-brand"><div class="portfolio-footer-title mb-2">Mia Sophie Emerick Schober</div><div class="portfolio-footer-copy">Python &amp; Django Developer creating dependable software for real workflows.</div></div>
-            <div class="col-12 col-md-6 col-lg-5"><div class="portfolio-footer-links"><div class="portfolio-footer-group"><span class="portfolio-footer-label">Deutsch</span><a href="impressum/index.html#german">Impressum</a><a href="datenschutz.html#german">Datenschutzerklärung</a></div><div class="portfolio-footer-group"><span class="portfolio-footer-label">English</span><a href="impressum/index.html#english">Legal Notice</a><a href="datenschutz.html#english">Privacy Policy</a></div></div></div>
-            <div class="col-12 col-md-6 col-lg-3"><div class="portfolio-footer-social"><a href="https://github.com/MiaMoon275/" aria-label="GitHub"><i class="bi bi-github"></i></a><a href="https://www.linkedin.com/in/mia-sophie-emerick-schober-23352a197/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="mailto:mia.sophie.dev@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a></div></div>
-        </div><div class="portfolio-footer-bottom mt-4 pt-4 d-flex flex-column flex-sm-row justify-content-between gap-2"><span>&copy; 2026 Mia Sophie Emerick Schober</span><span>Designed and developed by Mia E.S.</span></div></div>
+        <div class="container py-5">
+            <div class="row g-4 align-items-start">
+                <div class="col-12 col-lg-4 portfolio-footer-brand">
+                    <div class="portfolio-footer-title mb-2">Mia Sophie Emerick Schober</div>
+                    <div class="portfolio-footer-copy">Python &amp; Django Developer creating dependable software for
+                        real workflows.</div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="portfolio-footer-links">
+                        <div class="portfolio-footer-group"><span class="portfolio-footer-label">Deutsch</span><a
+                                href="impressum/index.html#german">Impressum</a><a
+                                href="datenschutz.html#german">Datenschutzerklärung</a></div>
+                        <div class="portfolio-footer-group"><span class="portfolio-footer-label">English</span><a
+                                href="impressum/index.html#english">Legal Notice</a><a
+                                href="datenschutz.html#english">Privacy Policy</a></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="portfolio-footer-social"><a href="https://github.com/MiaMoon275/" aria-label="GitHub"><i
+                                class="bi bi-github"></i></a><a
+                            href="https://www.linkedin.com/in/mia-sophie-emerick-schober-23352a197/"
+                            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a
+                            href="mailto:mia.sophie.dev@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-footer-bottom mt-4 pt-4 d-flex flex-column flex-sm-row justify-content-between gap-2">
+                <span>&copy; 2026 Mia Sophie Emerick Schober</span><span>Designed and developed by Mia E.S.</span></div>
+        </div>
     </footer>
 </body>
 
