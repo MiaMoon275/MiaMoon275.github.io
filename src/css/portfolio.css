@@ -368,9 +368,28 @@ body.portfolio-page {
 }
 
 .portfolio-footer-bottom {
+    align-items: center;
     color: var(--portfolio-muted);
     font-size: 0.8rem;
     border-top: 1px solid var(--portfolio-border);
+}
+
+.made-in-germany {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+.made-in-germany img {
+    flex: 0 0 1.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
 }
 
 .case-study-page {
