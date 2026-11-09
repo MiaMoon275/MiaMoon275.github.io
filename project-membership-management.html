@@ -4,7 +4,7 @@
 <head>
     <meta property="og:title" content="Membership Management Platform | Mia Emerick Schober" />
     <meta property="og:description"
-        content="Case study: a membership management platform that simplifies everyday administration for a large Berlin sports club." />
+        content="Case study: a Django membership platform with automated workflows, REST APIs, and on-premises delivery for a Berlin sports club." />
     <meta property="og:url" content="https://mia-sophie.dev/project-membership-management.html" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://mia-sophie.dev/content/projects/club_management.png" />
@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Case study: a membership management platform that simplifies everyday administration for a large Berlin sports club.">
+        content="Case study: a Django membership platform with automated workflows, REST APIs, and on-premises delivery for a Berlin sports club.">
     <meta name="theme-color" content="#050412">
 
     <title>Membership Management Platform | Mia E.S.</title>
@@ -39,8 +39,9 @@
                     <div class="col-12 col-lg-6">
                         <div class="eyebrow mb-3">Operations platform · Sports organization</div>
                         <h1 class="fw-bold text-white mb-4">Making membership administration easier to manage.</h1>
-                        <p class="case-lead mb-4">A central platform for Berlin's largest swimming club that replaces
-                            scattered manual tasks with one clear and dependable way of working.</p><a
+                        <p class="case-lead mb-4">A Django platform for Berlin's largest swimming club that digitizes
+                            membership applications, payments, and documents while preserving established office
+                            workflows.</p><a
                             class="btn btn-portfolio-primary btn-lg px-4" href="mailto:kontakt@mia-sophie.dev">Discuss
                             a similar project</a>
                     </div>
@@ -58,7 +59,7 @@
                             class="case-meta-label">Client</span><strong>Schwimm-Gemeinschaft Neukölln e.V.</strong>
                     </div>
                     <div class="col-6 col-lg-3 case-meta-item"><span class="case-meta-label">My
-                            role</span><strong>Independent product developer</strong></div>
+                            role</span><strong>Full-stack Django developer<br>Jan 2024 – Dec 2026</strong></div>
                     <div class="col-6 col-lg-3 case-meta-item"><span
                             class="case-meta-label">Audience</span><strong>Office team and members</strong></div>
                     <div class="col-6 col-lg-3 case-meta-item"><span class="case-meta-label">Status</span><strong>Active
@@ -74,20 +75,41 @@
                             <div class="eyebrow mb-2">The starting point</div>
                             <h2>Important work was spread across too many manual steps.</h2>
                             <p>Managing more than 5,000 active memberships involves applications, payments, documents,
-                                communication, and many recurring checks. When these tasks live in separate lists and
-                                routines, employees spend valuable time searching, transferring information, and
-                                correcting avoidable mistakes.</p>
-                            <p>The goal was not simply to digitize forms. It was to create a reliable working
-                                environment that reflects how the organization actually operates and gives the team a
-                                clear overview of every case.</p>
+                                communication, and recurring checks. At the outset, handwritten paper forms had to
+                                pass through several time-consuming processing steps.</p>
+                            <p>The goal was to reduce manual work by digitizing membership applications, application
+                                processing, and payment administration without disrupting established workflows. The
+                                platform needed to reflect the club's business rules and statutes while giving staff a
+                                clear overview of processing status, members, payments, and documents.</p>
                             <div class="eyebrow mt-5 mb-2">My contribution</div>
                             <h2>One platform shaped around the team's daily work.</h2>
-                            <p>I worked independently from process analysis through interface design and implementation.
-                                Regular feedback from the people using the system helped turn complex rules into clear
-                                steps, sensible views, and useful safeguards.</p>
-                            <p>The platform brings member information, payments, documents, and recurring processes
-                                together. Repetitive actions are prepared automatically, while decisions that require
-                                experience remain with the team.</p>
+                            <p>I took technical responsibility for the project, working independently from process
+                                analysis and system design through implementation. I coordinated features and
+                                interfaces with stakeholders and users to translate the club's rules into practical
+                                workflows for joining, member administration, family payments, and contracts.</p>
+                            <div class="eyebrow mt-5 mb-2">Architecture and data</div>
+                            <h2>Clear boundaries for complex business processes.</h2>
+                            <p>I separated the API from the interface and organized business logic in a service layer.
+                                Django models capture relationships and constraints, supported by migrations, CRUD
+                                workflows, and role-based permissions. REST APIs built with Django REST Framework
+                                provide member, payment, and document data to responsive interfaces using HTML, CSS,
+                                JavaScript, and Bootstrap.</p>
+                            <p>A dedicated copy view helps staff transfer application data into the club's main system,
+                                keeping the existing hand-off in the workflow.</p>
+                            <div class="eyebrow mt-5 mb-2">Automation and delivery</div>
+                            <h2>Less repetitive work, from deployment to daily operations.</h2>
+                            <p>To ensure reliable testing and deployment, I developed an on-premises CI/CD pipeline for reliable testing and deployment of the project on
+                                the client's host. <a href="project-secure-sync.html">Explore the full maintenance
+                                    process</a>.</p>
+                            <p>ReportLab generates PDFs for contracts, guarantees, and daily closing reports. Celery
+                                and Redis run asynchronous jobs for periodic consistency checks and automated cleanup
+                                of implausible database entries, and make daily closing reports available on a network
+                                drive.</p>
+                            <div class="eyebrow mt-5 mb-2">Quality and security</div>
+                            <h2>Maintaining confidence as the platform evolves.</h2>
+                            <p>I developed unit tests for all core processes and used manual and AI-assisted code
+                                reviews to identify security findings. Security remediation, negative and regression
+                                tests, and targeted refactoring support the platform's security and maintainability.</p>
                             <div class="eyebrow mt-5 mb-2">The result</div>
                             <h2>Less administrative friction and more confidence.</h2>
                             <p>The office team gains a shared source of information and can follow the status of a
@@ -124,9 +146,23 @@
                             <div class="mt-4 d-flex flex-wrap gap-2">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Django</span>
-                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Django REST Framework</span>
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
                                 <span class="tech-tag">Bootstrap</span>
                                 <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Responsive design</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">MS SQL Server</span>
+                                <span class="tech-tag">CI/CD</span>
+                                <span class="tech-tag">DevOps</span>
+                                <span class="tech-tag">Security remediation</span>
+                                <span class="tech-tag">Refactoring</span>
+                                <span class="tech-tag">ReportLab</span>
+                                <span class="tech-tag">Celery</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">Linux</span>
+                                <span class="tech-tag">Git / GitHub</span>
                             </div>
                         </div>
                     </aside>
