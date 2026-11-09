@@ -217,14 +217,33 @@ body.portfolio-page {
 }
 
 .project-visual {
+    position: relative;
     min-height: 23rem;
     background: #09081b;
 }
 
 .project-visual img {
+    position: absolute;
+    inset: 0;
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-color: #00000017;
+    /* object-fit: cover; */
+}
+
+.project-image-badge {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    max-width: min(30rem, calc(100% - 2rem));
+    margin: 0;
+    padding: 0.6rem 0.8rem;
+    color: var(--portfolio-muted);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    background: rgba(5, 4, 18, 0.92);
+    border-radius: 4px;
 }
 
 .project-index {
