@@ -153,8 +153,7 @@ body.portfolio-page {
     border-color: var(--portfolio-lilac);
 }
 
-.hero-social a,
-.footer-social a {
+.hero-social a {
     display: inline-grid;
     width: 2.65rem;
     height: 2.65rem;
@@ -164,8 +163,7 @@ body.portfolio-page {
     border-radius: 6px;
 }
 
-.hero-social a:hover,
-.footer-social a:hover {
+.hero-social a:hover {
     color: var(--portfolio-lime);
     border-color: var(--portfolio-lime);
 }

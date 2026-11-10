@@ -12150,67 +12150,6 @@ textarea.form-control-lg {
   --hover-glow: #8e52ff;
 }
 
-/* Meteor trail */
-.accent-line {
-  position: relative;
-  width: 32%;
-  height: 3px;
-  margin-right: 45%;
-  background: linear-gradient(90deg, transparent, #4f20f4);
-  border-radius: 99px;
-}
-
-@media (min-width: 768px) {
-  .accent-line {
-    margin-right: none;
-  }
-}
-/* Meteor head */
-.accent-line::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 7px;
-  height: 200%;
-  background: #c79dff;
-  border-radius: 50%;
-  border: 0.5px solid #c79dff;
-  transform: translate(50%, -50%);
-  box-shadow: 0 0 8px rgba(204, 97, 248, 0.9), 0 0 18px rgba(204, 97, 248, 0.6), 0 0 30px rgba(204, 97, 248, 0.3);
-}
-
-/* Text Gradients */
-.purple-gradient-accent {
-  background: linear-gradient(190deg, #b53ad1, 60%, #4f20f4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.purple-gradient {
-  background: linear-gradient(190deg, #c79dff, 35%, #4f20f4, transparent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Main attention text */
-.complementary-gradient {
-  background: linear-gradient(180deg, #f0dcff 0%, #c86dff 10%, #ffb15e 50%, #c86dff 90%, #f0dcff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 18px rgba(255, 150, 70, 0.08);
-}
-
-.bg-highlight-gradient {
-  background: linear-gradient(45deg, rgba(205, 97, 248, 0.137254902), rgba(27, 42, 177, 0.2196078431));
-}
-
-/* Scroll Bars */
-.scroll-purple {
-  scrollbar-color: #773aa2 #2c1a62;
-  scrollbar-width: thin;
-}
-
 /* Cards */
 .card {
   transition: all 0.2s ease;
@@ -12227,16 +12166,6 @@ a:hover .card {
   border-color: #8e52ff;
 }
 
-/* Progress Bars */
-.progress {
-  background-color: #2c1a62;
-}
-
-.progress-bar {
-  border-radius: 0.5rem;
-  background: linear-gradient(90deg, #4f20f4, #773aa2);
-}
-
 /* Buttons */
 .btn {
   border-radius: 5px;
@@ -12247,10 +12176,3 @@ a:hover .card {
   transform: translateY(-2px);
   background: linear-gradient(90deg, #8e52ff, #c79dff);
 }
-
-.btn-cta {
-  color: white !important;
-  background: linear-gradient(180deg, #4f20f4, #3b04a5);
-}
-
-/*# sourceMappingURL=custom.css.map */

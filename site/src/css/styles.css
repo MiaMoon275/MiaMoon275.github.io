@@ -1,0 +1,36 @@
+body {
+    background-image: url("../../content/background.png");
+    background-repeat: repeat;
+    font-family: 'Inter', sans-serif !important;
+    padding: 0px 5px;
+}
+
+body.nebula-effect {
+    background-color: var(--bs-body-bg);
+    background-image:
+        radial-gradient(circle at top left, rgba(var(--bs-primary-rgb), 0.22), transparent 34%),
+        radial-gradient(circle at top right, rgba(var(--bs-info-rgb), 0.18), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(199, 157, 255, 0.08), transparent 30%),
+        url("../../content/background.png");
+    background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.fs-7 {
+    font-size: .9rem;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 30px 2%;
+    }
+
+    .fs-7 {
+        font-size: 1.12rem !important;
+    }
+}

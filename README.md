@@ -22,8 +22,7 @@ It focuses on:
 
 - Clean and modern UI design
 - Responsive layout
-- Modular and maintainable JavaScript architecture
-- Smooth UX interactions
+- Responsive project and case-study pages
 
 ---
 
@@ -31,8 +30,7 @@ It focuses on:
 
 - **HTML5**
 - **CSS3 / Bootstrap**
-- **JavaScript (ES6+)**
-- **LocalStorage caching system (currently disabled / not required)**
+- **Bootstrap JavaScript** for the mobile navigation
 - **Custom UI components**
 - **Responsive design principles**
 
@@ -40,12 +38,9 @@ It focuses on:
 
 ## 🚀 Features
 
-- Fast loading with caching
-- Custom styled components with grid, cards and and modal systems
+- Custom styled components with grids and cards
 - Fully responsive design (mobile-first approach)
-- Modular JS architecture (loader-services, configuration)
-- Dynamic project and skill rendering
-- LocalStorage-based performance optimization (currently disabled / not required)
+- Static project and skill content
 
 ---
 
@@ -53,24 +48,47 @@ It focuses on:
 
 ```txt
 mia-sophie.dev/
-│
-├── config/
-│   ├── projects.config.js
-│   └── user.config.js
-├── src/
-│   ├── css/
-|   |   └── styles.css
-│   ├── js/
-│   │   ├── services/
-│   │   │   ├── certificates.js
-│   │   │   ├── projects.js
-│   │   │   ├── text-content.js
-│   │   │   └── tool-badges.js
-│   │   └── main.js
-├── content/
-│   ├── content/
-│   ├── projects/
-│   └── avatar.png
-├── index.html
+├── site/                   # public website and deployment root
+│   ├── index.html
+│   ├── project-*.html
+│   ├── content/            # images used by the site
+│   ├── css/                # compiled Bootstrap and custom styles
+│   ├── src/css/            # additional styles used by the site
+│   ├── datenschutz/
+│   └── impressum/
+├── scss/                   # Sass source, not deployed
+├── scripts/                # site checks, not deployed
+├── package.json
 └── README.md
 ```
+
+Files outside `site/` are not deployed.
+
+## Development and deployment
+
+Install the locked dependencies with `npm ci`. After changing
+`scss/custom.scss`, run `npm run build:css` and commit the resulting
+`site/css/custom.css`. The build does not generate a source map.
+
+Run `npm test` to check local HTML links, image and stylesheet references,
+CSS URLs, and HTML anchors. External URLs are not checked. To preview the
+website, serve `site/` as the web server's document root rather than opening
+the HTML files directly.
+
+The FTPS workflow runs the checks and deploys from `site/` when changes are
+pushed to `main`. It can also be started manually from the Actions tab. Configure
+the repository secrets `FTPS_SERVER`, `FTPS_USERNAME`, and `FTPS_PASSWORD`,
+and the repository variable `FTPS_DEPLOY_DIR` under **Settings → Secrets and
+variables → Actions**. The target directory must end with `/` and must be the
+website's document root on the FTPS server.
+
+The workflow currently uses `dry-run: true`, so it connects to the server and
+reports planned changes without uploading or deleting files. Commit and push
+the workflow and website files, then review a successful dry-run log and verify
+the target directory and planned changes. Only then change `dry-run` to
+`false` and push again to enable the real deployment. Previously synchronized
+files may be deleted when they are removed from `site/`.
+
+GitHub Pages is configured separately from this workflow. After confirming the
+FTPS deployment and the domain's server configuration, disable Pages in the
+repository's **Settings → Pages** if it is no longer needed.

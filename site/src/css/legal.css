@@ -207,33 +207,6 @@ body.legal-page {
     color: var(--portfolio-lime);
 }
 
-.legal-page .legal-footer-links {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
-    width: 100%;
-}
-
-.legal-page .legal-footer-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-}
-
-.legal-page .legal-footer-label {
-    color: var(--portfolio-lilac);
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.legal-page .legal-footer-group a {
-    color: #fff !important;
-}
-
 @media (max-width: 767.98px) {
     .legal-page .project-shell {
         padding-top: 6rem !important;
@@ -255,8 +228,4 @@ body.legal-page {
         padding-inline: 0.5rem;
     }
 
-    .legal-page .legal-footer-links {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
 }
