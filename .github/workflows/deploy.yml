@@ -62,4 +62,4 @@ jobs:
           security: strict
           local-dir: ./site/
           server-dir: ${{ vars.FTPS_DEPLOY_DIR }}
-          dry-run: true
+          dry-run: false
