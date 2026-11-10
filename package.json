@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build:css": "sass --no-source-map scss/custom.scss site/css/custom.css",
-    "test": "node scripts/check-site.cjs"
+    "build:gallery": "node scripts/build-gallery.cjs",
+    "test": "node --test scripts/build-gallery.test.cjs && node scripts/check-site.cjs"
   },
   "repository": {
     "type": "git",

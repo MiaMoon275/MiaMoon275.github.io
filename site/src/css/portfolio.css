@@ -437,6 +437,20 @@ body.portfolio-page {
     object-fit: cover;
 }
 
+.gallery-card {
+    overflow: hidden;
+    color: var(--portfolio-ink);
+    background: var(--portfolio-panel);
+    border: 1px solid var(--portfolio-border);
+}
+
+.gallery-card img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    background: #09081b;
+}
+
 .case-meta {
     border-block: 1px solid var(--portfolio-border);
 }

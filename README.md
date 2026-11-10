@@ -89,6 +89,20 @@ the target directory and planned changes. Only then change `dry-run` to
 `false` and push again to enable the real deployment. Previously synchronized
 files may be deleted when they are removed from `site/`.
 
+### Membership management gallery
+
+Add or remove images in `site/content/projects/club_management_gallery/`.
+The gallery supports PNG, JPEG, WebP, AVIF, and GIF files and orders them by
+filename. Filenames become the visible captions and alternative text; use
+descriptive names with underscores or hyphens between words. Only publish
+images approved for public use and containing no sensitive information.
+
+Run `npm run build:gallery` before previewing or committing the generated
+gallery page. The FTPS workflow runs this build automatically before its
+checks and deployment, so adding an image requires no HTML changes. For
+GitHub Pages or any other deployment that publishes `site/` directly without
+running the build, regenerate and commit the gallery page along with the images.
+
 GitHub Pages is configured separately from this workflow. After confirming the
 FTPS deployment and the domain's server configuration, disable Pages in the
 repository's **Settings → Pages** if it is no longer needed.
