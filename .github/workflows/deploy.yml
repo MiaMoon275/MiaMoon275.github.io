@@ -1,0 +1,65 @@
+name: Deploy static website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check website references
+        run: npm test
+
+      - name: Validate FTPS configuration
+        env:
+          FTPS_SERVER: ${{ secrets.FTPS_SERVER }}
+          FTPS_USERNAME: ${{ secrets.FTPS_USERNAME }}
+          FTPS_PASSWORD: ${{ secrets.FTPS_PASSWORD }}
+          FTPS_DEPLOY_DIR: ${{ vars.FTPS_DEPLOY_DIR }}
+        run: |
+          for name in FTPS_SERVER FTPS_USERNAME FTPS_PASSWORD FTPS_DEPLOY_DIR; do
+            if [[ -z "${!name}" ]]; then
+              echo "::error::$name is not configured"
+              exit 1
+            fi
+          done
+          if [[ "$FTPS_DEPLOY_DIR" != */ ]]; then
+            echo "::error::FTPS_DEPLOY_DIR must end with /"
+            exit 1
+          fi
+
+      - name: Deploy over FTPS
+        uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287
+        with:
+          server: ${{ secrets.FTPS_SERVER }}
+          username: ${{ secrets.FTPS_USERNAME }}
+          password: ${{ secrets.FTPS_PASSWORD }}
+          protocol: ftps
+          port: 21
+          security: strict
+          local-dir: ./site/
+          server-dir: ${{ vars.FTPS_DEPLOY_DIR }}
+          dry-run: true
