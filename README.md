@@ -82,12 +82,9 @@ and the repository variable `FTPS_DEPLOY_DIR` under **Settings → Secrets and
 variables → Actions**. The target directory must end with `/` and must be the
 website's document root on the FTPS server.
 
-The workflow currently uses `dry-run: true`, so it connects to the server and
-reports planned changes without uploading or deleting files. Commit and push
-the workflow and website files, then review a successful dry-run log and verify
-the target directory and planned changes. Only then change `dry-run` to
-`false` and push again to enable the real deployment. Previously synchronized
-files may be deleted when they are removed from `site/`.
+By using `dry-run: false`, the pipeline can be testet without deployment. 
+It will connect to the server and report planned changes without uploading 
+or deleting files. 
 
 ### Membership management gallery
 
