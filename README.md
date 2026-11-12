@@ -72,6 +72,8 @@ Install the locked dependencies with `npm ci`. After changing
 Bootstrap, Bootstrap Icons and the font files are served locally from
 `site/vendor/`. After updating their dependencies, run `npm run build:assets`
 and commit the resulting files. The portrait is also hosted in `site/content/`.
+The original font licenses are kept in `scripts/licenses/` and copied into
+`site/vendor/` by the asset build; check them when updating the fonts.
 
 Run `npm test` to check local HTML links, image and stylesheet references,
 CSS URLs, and HTML anchors. The check rejects external `src`, `poster`, HTML

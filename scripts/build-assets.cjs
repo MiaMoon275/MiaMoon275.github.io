@@ -13,6 +13,7 @@ function copy(source, destination) {
 for (const [source, destination] of [
   ["bootstrap/dist/js/bootstrap.bundle.min.js", "bootstrap/bootstrap.bundle.min.js"],
   ["bootstrap/LICENSE", "bootstrap/LICENSE"],
+  ["@popperjs/core/LICENSE.md", "bootstrap/POPPER-LICENSE"],
   ["bootstrap4/dist/css/bootstrap.min.css", "bootstrap4/bootstrap.min.css"],
   ["bootstrap4/LICENSE", "bootstrap4/LICENSE"],
   ["bootstrap-icons/font/bootstrap-icons.min.css", "bootstrap-icons/bootstrap-icons.min.css"],
@@ -27,7 +28,8 @@ for (const [font, weights] of [
 ]) {
   const source = path.join("@fontsource", font);
   const destination = path.join("fonts", font);
-  copy(path.join(source, "LICENSE"), path.join(destination, "LICENSE"));
+  fs.mkdirSync(path.join(vendor, destination), { recursive: true });
+  fs.copyFileSync(path.join(__dirname, "licenses", `${font}-OFL.txt`), path.join(vendor, destination, "LICENSE"));
   for (const weight of weights) {
     const stylesheet = `${weight}.css`;
     copy(path.join(source, stylesheet), path.join(destination, stylesheet));
