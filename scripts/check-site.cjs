@@ -4,7 +4,7 @@ const { parseDocument } = require("htmlparser2");
 const postcss = require("postcss");
 const valueParser = require("postcss-value-parser");
 
-const root = path.resolve(__dirname, "..", "site");
+const root = path.resolve(process.argv[2] || path.join(__dirname, "..", "site"));
 const origin = "https://mia-sophie.dev";
 const errors = [];
 const htmlDocuments = new Map();
@@ -29,7 +29,7 @@ function htmlDocument(file) {
   return htmlDocuments.get(file);
 }
 
-function checkReference(file, reference) {
+function checkReference(file, reference, resource = false) {
   if (!reference || reference === "#") return;
   const source = path.relative(root, file).split(path.sep).join("/");
   let url;
@@ -37,6 +37,10 @@ function checkReference(file, reference) {
     url = new URL(reference, `${origin}/${source}`);
   } catch (error) {
     errors.push(`${source}: invalid URL ${reference}: ${error.message}`);
+    return;
+  }
+  if (resource && url.origin !== origin && url.protocol !== "data:") {
+    errors.push(`${source}: external resource ${reference}`);
     return;
   }
   if (url.origin !== origin || !["http:", "https:"].includes(url.protocol)) return;
@@ -78,9 +82,19 @@ function checkReference(file, reference) {
 function checkCssValue(file, value) {
   valueParser(value).walk((node) => {
     if (node.type === "function" && node.value.toLowerCase() === "url") {
-      checkReference(file, valueParser.stringify(node.nodes).trim().replace(/^(['"])(.*)\1$/, "$2"));
+      checkReference(file, valueParser.stringify(node.nodes).trim().replace(/^(['"])(.*)\1$/, "$2"), true);
       return false;
     }
+  });
+}
+
+function checkStylesheet(file, css) {
+  const stylesheet = postcss.parse(css, { from: file });
+  stylesheet.walkDecls((decl) => checkCssValue(file, decl.value));
+  stylesheet.walkAtRules("import", (rule) => {
+    const first = valueParser(rule.params).nodes.find((node) => node.type !== "space");
+    if (first && first.type === "string") checkReference(file, first.value, true);
+    else checkCssValue(file, rule.params);
   });
 }
 
@@ -95,7 +109,9 @@ for (const file of files) {
     visit(htmlDocument(file), (node) => {
       if (!node.attribs) return;
       for (const attribute of ["href", "src", "poster"]) {
-        if (node.attribs[attribute]) checkReference(file, node.attribs[attribute]);
+        if (node.attribs[attribute]) {
+          checkReference(file, node.attribs[attribute], attribute !== "href" || node.name === "link");
+        }
       }
       if (node.attribs.property === "og:image" || node.attribs.property === "og:url") {
         checkReference(file, node.attribs.content);
@@ -103,18 +119,11 @@ for (const file of files) {
       if (node.attribs.style) checkCssValue(file, node.attribs.style);
       if (node.name === "style") {
         const css = (node.children || []).map((child) => child.data || "").join("");
-        const stylesheet = postcss.parse(css, { from: file });
-        stylesheet.walkDecls((decl) => checkCssValue(file, decl.value));
+        checkStylesheet(file, css);
       }
     });
   } else if (extension === ".css") {
-    const stylesheet = postcss.parse(fs.readFileSync(file, "utf8"), { from: file });
-    stylesheet.walkDecls((decl) => checkCssValue(file, decl.value));
-    stylesheet.walkAtRules("import", (rule) => {
-      const first = valueParser(rule.params).nodes.find((node) => node.type !== "space");
-      if (first && first.type === "string") checkReference(file, first.value);
-      else checkCssValue(file, rule.params);
-    });
+    checkStylesheet(file, fs.readFileSync(file, "utf8"));
   }
 }
 

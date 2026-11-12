@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import url("../../vendor/fonts/dm-sans/400.css");
+@import url("../../vendor/fonts/dm-sans/500.css");
+@import url("../../vendor/fonts/dm-sans/600.css");
+@import url("../../vendor/fonts/dm-sans/700.css");
+@import url("../../vendor/fonts/space-grotesk/500.css");
+@import url("../../vendor/fonts/space-grotesk/600.css");
+@import url("../../vendor/fonts/space-grotesk/700.css");
 
 :root {
     --portfolio-ink: #f7f4ff;

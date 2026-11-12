@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build:css": "sass --no-source-map scss/custom.scss site/css/custom.css",
+    "build:assets": "node scripts/build-assets.cjs",
     "build:gallery": "node scripts/build-gallery.cjs",
-    "test": "node --test scripts/build-gallery.test.cjs && node scripts/check-site.cjs"
+    "test": "node --test scripts/build-gallery.test.cjs scripts/check-site.test.cjs && node scripts/check-site.cjs"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,11 @@
     "postcss-value-parser": "^4.2.0"
   },
   "dependencies": {
+    "@fontsource/dm-sans": "5.2.6",
+    "@fontsource/space-grotesk": "5.2.6",
     "bootstrap": "^5.3.8",
+    "bootstrap-icons": "1.13.1",
+    "bootstrap4": "npm:bootstrap@4.3.1",
     "sass": "^1.100.0"
   }
 }

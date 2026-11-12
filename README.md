@@ -69,9 +69,13 @@ Files outside `site/` are not deployed.
 Install the locked dependencies with `npm ci`. After changing
 `scss/custom.scss`, run `npm run build:css` and commit the resulting
 `site/css/custom.css`. The build does not generate a source map.
+Bootstrap, Bootstrap Icons and the font files are served locally from
+`site/vendor/`. After updating their dependencies, run `npm run build:assets`
+and commit the resulting files. The portrait is also hosted in `site/content/`.
 
 Run `npm test` to check local HTML links, image and stylesheet references,
-CSS URLs, and HTML anchors. External URLs are not checked. To preview the
+CSS URLs, and HTML anchors. The check rejects external `src`, `poster`, HTML
+`link` and CSS resource URLs; external navigation links are not checked. To preview the
 website, serve `site/` as the web server's document root rather than opening
 the HTML files directly.
 
