@@ -8,7 +8,7 @@ I will update this project regulary.
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Website
 
 🔗 [View Portfolio](https://mia-sophie.dev)
 
